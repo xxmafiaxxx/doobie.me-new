@@ -1,0 +1,38 @@
+{
+  "budman": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-smackeddobbieadmin-budman-214854-authRole",
+      "UnauthRoleArn": "arn:aws:iam::396092114717:role/amplify-smackeddobbieadmin-budman-214854-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::396092114717:role/amplify-smackeddobbieadmin-budman-214854-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-smackeddobbieadmin-budman-214854-deployment",
+      "UnauthRoleName": "amplify-smackeddobbieadmin-budman-214854-unauthRole",
+      "StackName": "amplify-smackeddobbieadmin-budman-214854",
+      "StackId": "arn:aws:cloudformation:us-east-1:396092114717:stack/amplify-smackeddobbieadmin-budman-214854/4fb83c00-f104-11ec-93ab-0a93246b8fa3",
+      "AmplifyAppId": "d1u8o2z4nigaxi"
+    },
+    "categories": {
+      "auth": {
+        "smackeddobbieadmin87364adf": {}
+      },
+      "function": {
+        "ProcessPayment": {
+          "deploymentBucketName": "amplify-smackeddobbieadmin-budman-214854-deployment",
+          "s3Key": "amplify-builds/ProcessPayment-7743703772556a5a6e75-build.zip"
+        },
+        "AddUser": {
+          "deploymentBucketName": "amplify-smackeddobbieadmin-budman-214854-deployment",
+          "s3Key": "amplify-builds/AddUser-456a324756334b4e6e58-build.zip"
+        },
+        "createOrder": {
+          "deploymentBucketName": "amplify-smackeddobbieadmin-budman-214854-deployment",
+          "s3Key": "amplify-builds/createOrder-6f4c653041536b4d4456-build.zip"
+        },
+        "sendEmailToMe": {
+          "deploymentBucketName": "amplify-smackeddobbieadmin-budman-214854-deployment",
+          "s3Key": "amplify-builds/sendEmailToMe-70455039673671563144-build.zip"
+        }
+      }
+    }
+  }
+}
