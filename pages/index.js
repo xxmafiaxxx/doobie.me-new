@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <><Head>
         <title>Doobie Drone Deliveries - Brooklyn's Cannabis One-Stop-Shop| Cannabis Delivery Service</title>
-        <meta property="og:title" content="Doobie Drone Deliveries - Brooklyn's Cannabis One-Stop-Shop & Drone Delivery Statup" />
+        <meta property="og:title" content="Doobie Drone Deliveries - Brooklyn's Cannabis One-Stop-Shop & Drone Delivery Startup" />
         <meta property="og:description" content="Doobie Deliveries is Brooklyn's first cannabis drone delivery service" />
         <meta property="og:keywords" content="weed, drugs,weed delivery,weed app, weed in brooklyn,doobie,cannabis,marijuana,drone deliveries,cannabis drone,cannabis token," />
         <meta property="og:url" content="https://doobie.me" />

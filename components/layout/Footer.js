@@ -18,7 +18,7 @@ const Footer = () => {
                                         <p className="mb-45">
                                             Start You'r Daily Shopping with{" "}
                                             <span className="text-brand">
-                                                Nest Mart
+                                                Doobie
                                             </span>
                                         </p>
                                         <form className="form-subcriber d-flex">
@@ -75,7 +75,7 @@ const Footer = () => {
                                     </div>
                                     <div className="banner-text">
                                         <h3 className="icon-box-title">
-                                            Free delivery
+                                            Drone delivery
                                         </h3>
                                         <p>24/7 amazing services</p>
                                     </div>
@@ -132,9 +132,9 @@ const Footer = () => {
                                     </div>
                                     <div className="banner-text">
                                         <h3 className="icon-box-title">
-                                            Easy returns
+                                            Satisfaction Guaranteed
                                         </h3>
-                                        <p>Within 30 days</p>
+                                        <p>Or Your Money Back</p>
                                     </div>
                                 </div>
                             </div>
@@ -171,14 +171,13 @@ const Footer = () => {
                                     <div className="logo  mb-30">
                                         <Link href="/"><a className="mb-15">
                                             <img
-                                                src="/assets/imgs/theme/logo.svg"
+                                                src="/assets/imgs/logo.png"
                                                 alt="logo"
                                             />
                                         </a>
                                         </Link>
                                         <p className="font-lg text-heading">
-                                            Awesome grocery store website
-                                            template
+                                            Doobie Drone Deliveries
                                         </p>
                                     </div>
                                     <ul className="contact-infor">
@@ -189,8 +188,8 @@ const Footer = () => {
                                             />
                                             <strong>Address: </strong>{" "}
                                             <span>
-                                                5171 W Campbell Ave undefined
-                                                Kent, Utah 53127 United States
+                                            <br></br>18 East 48th Street.<br></br> 
+                                                New York, New York 10017 <br></br>United States
                                             </span>
                                         </li>
                                         <li>
@@ -199,7 +198,7 @@ const Footer = () => {
                                                 alt=""
                                             />
                                             <strong>Call Us:</strong>
-                                            <span>(+91) - 540-025-124553</span>
+                                            <span>(+1)-718-673-8192</span>
                                         </li>
                                         <li>
                                             <img
@@ -207,7 +206,7 @@ const Footer = () => {
                                                 alt=""
                                             />
                                             <strong>Email:</strong>
-                                            <span>sale@Nest.com</span>
+                                            <span>smackedc@gmail.com</span>
                                         </li>
                                         <li>
                                             <img
@@ -216,7 +215,7 @@ const Footer = () => {
                                             />
                                             <strong>Hours:</strong>
                                             <span>
-                                                10:00 - 18:00, Mon - Sat
+                                                9:00am - 12:am, Mon - Sun
                                             </span>
                                         </li>
                                     </ul>
@@ -316,26 +315,24 @@ const Footer = () => {
                                 <h4 className="widget-title ">Popular</h4>
                                 <ul className="footer-list  mb-sm-5 mb-md-0">
                                     <li>
-                                        <a href="#">Milk & Flavoured Milk</a>
+                                        <a href="#">Indica</a>
                                     </li>
                                     <li>
-                                        <a href="#">Butter and Margarine</a>
+                                        <a href="#">Sativa</a>
                                     </li>
                                     <li>
-                                        <a href="#">Eggs Substitutes</a>
+                                        <a href="#">Hybrid</a>
                                     </li>
                                     <li>
-                                        <a href="#">Marmalades</a>
+                                        <a href="#">Oils</a>
                                     </li>
                                     <li>
-                                        <a href="#">Sour Cream and Dips</a>
+                                        <a href="#">Home Made</a>
                                     </li>
                                     <li>
-                                        <a href="#">Tea & Kombucha</a>
+                                        <a href="#">Exotic Products</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Cheese</a>
-                                    </li>
+                                 
                                 </ul>
                             </div>
                             <div
@@ -382,9 +379,9 @@ const Footer = () => {
                         </div>
                         <div className="col-xl-4 col-lg-6 col-md-6">
                             <p className="font-sm mb-0">
-                                &copy; 2021,{" "}
-                                <strong className="text-brand">Nest</strong> - HTML
-                                Ecommerce Template <br />
+                                &copy; 2022,{" "}
+                                <strong className="text-brand">Doobie</strong> -
+                                Drone Delivery <br />
                                 All rights reserved
                             </p>
                         </div>
@@ -395,7 +392,7 @@ const Footer = () => {
                                     alt="hotline"
                                 />
                                 <p>
-                                    1900 - 6666<span>Working 8:00 - 22:00</span>
+                                    1-718-673-8192<span>Working 8:00 - 22:00</span>
                                 </p>
                             </div>
                             <div className="hotline d-lg-inline-flex">
@@ -404,7 +401,7 @@ const Footer = () => {
                                     alt="hotline"
                                 />
                                 <p>
-                                    1900 - 8888<span>24/7 Support Center</span>
+                                1-718-673-8192<span>24/7 Support Center</span>
                                 </p>
                             </div>
                         </div>
