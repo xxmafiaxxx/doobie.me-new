@@ -16,13 +16,12 @@ import Link from "next/link";
 export default function Home() {
     return (
         <><Head>
-        <title>Doobie Deliveries - Brooklyn's Cannabis One-Stop-Shop| Homepage</title>
-        <meta name="description" content="Doobie Deliveries is the first web based platform for building cannabis based businesses" />
-        <meta property="og:title" content="Doobie Deliveries - Brooklyn's Cannabis One-Stop-Shop| Homepage" />
-        <meta property="og:description" content="Doobie Deliveries is the first web based platform for building cannabis based businesses" />
+        <title>Doobie Drone Deliveries - Brooklyn's Cannabis One-Stop-Shop| Cannabis Delivery Service</title>
+        <meta property="og:title" content="Doobie Drone Deliveries - Brooklyn's Cannabis One-Stop-Shop| Drone Deliveries Home" />
+        <meta property="og:description" content="Doobie Deliveries is Brooklyn's first cannabis drone delivery service" />
         <meta property="og:keywords" content="weed, drugs,weed delivery,weed app, weed in brooklyn,doobie,cannabis,marijuana" />
         <meta property="og:url" content="https://doobie.me" />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content="/assets/imgs/logodoobie.png" />
 
         <meta property="og:type" content="website" />
         <meta name="facebook-domain-verification" content="o40376jeco0o7i1q7o8x0d04xf49if" />
