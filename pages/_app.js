@@ -7,6 +7,15 @@ import 'react-toastify/dist/ReactToastify.css';
 // import "slick-carousel/slick/slick-theme.css";
 // import "slick-carousel/slick/slick.css";
 import "react-responsive-modal/styles.css";
+import {
+    LedgerWalletAdapter,
+    PhantomWalletAdapter,
+    SlopeWalletAdapter,
+    SolflareWalletAdapter,
+    SolletExtensionWalletAdapter,
+    SolletWalletAdapter,
+    TorusWalletAdapter,
+} from '@solana/wallet-adapter-wallets';
 // import WOW from 'wowjs';
 // Swiper Slider
 import "swiper/css";

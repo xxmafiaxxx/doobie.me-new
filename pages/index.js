@@ -1,6 +1,7 @@
 import CategoryTab from "../components/ecommerce/categoryTab";
 import FeatchDeals from "../components/ecommerce/fetchDeals";
 import FeatchTab from "../components/ecommerce/fetchTab";
+import Head from "next/head";
 import FetchTabSlider from "../components/ecommerce/fetchTabSlider";
 import Bottom from "../components/elements/Bottom";
 import QuickView from "./../components/ecommerce/QuickView";
@@ -14,7 +15,19 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <>
+        <><Head>
+        <title>Doobie Deliveries - Brooklyn's Cannabis One-Stop-Shop| Homepage</title>
+        <meta name="description" content="Doobie Deliveries is the first web based platform for building cannabis based businesses" />
+        <meta property="og:title" content="Doobie Deliveries - Brooklyn's Cannabis One-Stop-Shop| Homepage" />
+        <meta property="og:description" content="Doobie Deliveries is the first web based platform for building cannabis based businesses" />
+        <meta property="og:keywords" content="weed, drugs,weed delivery,weed app, weed in brooklyn,doobie,cannabis,marijuana" />
+        <meta property="og:url" content="https://doobie.me" />
+        <meta property="og:image" content="" />
+
+        <meta property="og:type" content="website" />
+        <meta name="facebook-domain-verification" content="o40376jeco0o7i1q7o8x0d04xf49if" />
+        <link rel="icon" href="/favicon.png" />
+    </Head>
             <IntroPopup />
 
             <Layout noBreadcrumb="d-none">
@@ -34,22 +47,22 @@ export default function Home() {
                                 <ul className="list-inline nav nav-tabs links">
                                     <li className="list-inline-item nav-item">
                                         <Link href="/products">
-                                            <a className="nav-link">Cake & Milk</a>
+                                            <a className="nav-link">Indica</a>
                                         </Link>
                                     </li>
                                     <li className="list-inline-item nav-item">
                                         <Link href="/products">
-                                            <a className="nav-link">Coffes & Teas</a>
+                                            <a className="nav-link">Sativa</a>
                                         </Link>
                                     </li>
                                     <li className="list-inline-item nav-item">
                                         <Link href="/products">
-                                            <a className="nav-link active">Pet Foods</a>
+                                            <a className="nav-link active">Hybrids</a>
                                         </Link>
                                     </li>
                                     <li className="list-inline-item nav-item">
                                         <Link href="/products">
-                                            <a className="nav-link">Vegetables</a>
+                                            <a className="nav-link">Home Made</a>
                                         </Link>
                                     </li>
                                 </ul>
