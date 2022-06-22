@@ -32,6 +32,10 @@ import "@aws-amplify/ui-react/styles.css";
 Amplify.configure(aws_exports);
 
 function MyApp({ Component, pageProps }) {
+    //Webhooks
+//const CoinbaseWebHook = React.lazy(() =>
+//import("../components/WebHooks/coinbase-commerce-webhook.jsx")
+//);
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         setLoading(true);
