@@ -87,7 +87,7 @@ const Header = ({
                                             Need help? Call Us:{" "}
                                             <strong className="text-brand">
                                                 {" "}
-                                                + 1800 900
+                                                + 1718 673 8192
                                             </strong>
                                         </li>
                                         <li>
@@ -185,7 +185,7 @@ const Header = ({
                                 <Link href="/">
                                     <a>
                                         <img
-                                            src="/assets/imgs/theme/logo.svg"
+                                            src="/assets/imgs/logodoobie.png"
                                             alt="logo"
                                         />
                                     </a>
