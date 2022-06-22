@@ -24,7 +24,12 @@ import StorageWrapper from "../components/ecommerce/storage-wrapper";
 import "../public/assets/css/main.css";
 import store from "../redux/store";
 import Preloader from "./../components/elements/Preloader";
+import { Amplify, Auth } from "aws-amplify";
+import aws_exports from "../src/aws-exports";
+import { withAuthenticator } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
 
+Amplify.configure(aws_exports);
 
 function MyApp({ Component, pageProps }) {
     const [loading, setLoading] = useState(false);
