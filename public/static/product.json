@@ -1,12 +1,12 @@
 [
     {
-        "title": "Seeds of Change Organic Quinoa, Brown",
-        "slug": "seeds-of-change-organic-quinoe",
+        "title": "Self Love",
+        "slug": "self-love",
         "moreLove": true,
         "id": "1",
-        "price": 238.85,
-        "oldPrice": 245.8,
-        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "price": 50.00,
+        "oldPrice": 65.00,
+        "desc": "Premiere product of Project Power!",
         "images": [
             {
                 "img": "/assets/imgs/shop/product-1-1.jpg"
@@ -28,10 +28,10 @@
             }
         ],
         "condition": "new",
-        "vendor": "nestFood",
+        "vendor": "Project Power",
         "color": "blue",
-        "brand": "armani",
-        "category": "clothing",
+        "brand": "local",
+        "category": "hybrid",
         "featured": false,
         "trending": true,
         "discount": {
@@ -50,17 +50,17 @@
             "purple"
         ],
         "weight": 150,
-        "tags": "broccoli",
+        "tags": "sativa",
         "sizes": "s",
         "stock": 0,
         "review": 10,
-        "rating": 3,
+        "rating": 4,
         "ratingScore": 90,
         "created": ""
     },
     {
-        "title": "All Natural Italian-Style Chicken Meatballs",
-        "slug": "all-natural-italian-style-chicken-meatballs",
+        "title": "Forgiveness",
+        "slug": "forgiveness",
         "moreLove": true,
         "id": "2",
         "price": 78,
@@ -86,7 +86,7 @@
             }
         ],
         "condition": "refurbished",
-        "vendor": "stouffer",
+        "vendor": "Project Power",
         "color": "blue",
         "brand": "armani",
         "category": "jeans",
@@ -116,12 +116,12 @@
         "created": "2021-02-03T06:48:07"
     },
     {
-        "title": "Angie’s Boomchickapop Sweet & Salty",
+        "title": "Girl Scout Cookies",
         "slug": "angie’s-boomchickapop-sweet-&-salty",
         "moreLove": true,
         "id": "3",
         "price": 35,
-        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "desc": "m!",
         "images": [
             {
                 "img": "/assets/imgs/shop/product-3-1.jpg"
@@ -173,8 +173,8 @@
         "created": ""
     },
     {
-        "title": "Foster Farms Takeout Crispy Classic",
-        "slug": "foster-farms-takeout-crispy-classic",
+        "title": "Runtz",
+        "slug": "runtz",
         "moreLove": true,
         "id": "4",
         "price": 55,

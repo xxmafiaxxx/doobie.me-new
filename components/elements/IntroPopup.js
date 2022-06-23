@@ -43,7 +43,7 @@ const IntroPopup = () => {
                                     <h6 className="product-title">
                                         <Link href="/shop-product-right">
                                             <a className="text-heading">
-                                                Indica and Sativa in Your face
+                                                Indica and Sativa Month
                                             </a>
                                         </Link>
                                     </h6>
