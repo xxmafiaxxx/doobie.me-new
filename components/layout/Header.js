@@ -459,31 +459,10 @@ const Header = ({
                                                 <Link href="/">
                                                     <a className="active">
                                                         Home
-                                                        <i className="fi-rs-angle-down"></i>
+                                                        
                                                     </a>
                                                 </Link>
-                                                <ul className="sub-menu">
-                                                    <li>
-                                                        <Link href="/">
-                                                            <a>Home 1</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/index-2">
-                                                            <a>Home 2</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/index-3">
-                                                            <a>Home 3</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/index-4">
-                                                            <a>Home 4</a>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
+                                           
                                             </li>
                                             <li>
                                                 <Link href="/page-about">
@@ -498,67 +477,9 @@ const Header = ({
                                                     </a>
                                                 </Link>
                                                 <ul className="sub-menu">
-                                                    <li>
-                                                        <Link href="/shop-grid-right">
-                                                            <a>
-                                                                Shop Grid –
-                                                                Right Sidebar
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/products">
-                                                            <a>
-                                                                Shop Grid – Left
-                                                                Sidebar
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/shop-list-right">
-                                                            <a>
-                                                                Shop List –
-                                                                Right Sidebar
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/shop-list-left">
-                                                            <a>
-                                                                Shop List – Left
-                                                                Sidebar
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/shop-fullwidth">
-                                                            <a>Shop - Wide</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/shop-filter">
-                                                            <a>Shop - Filter</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/shop-wishlist">
-                                                            <a>
-                                                                Shop – Wishlist
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/shop-cart">
-                                                            <a>Shop – Cart</a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/shop-checkout">
-                                                            <a>
-                                                                Shop – Checkout
-                                                            </a>
-                                                        </Link>
-                                                    </li>
+                                        
+                                                
+      
                                                     <li>
                                                         <Link href="/shop-compare">
                                                             <a>
@@ -572,8 +493,7 @@ const Header = ({
                                             <li>
                                                 <a href="#">Vendors <i className="fi-rs-angle-down"></i></a>
                                                 <ul className="sub-menu">
-                                                    <li><Link href="/vendors"><a>Vendors Grid</a></Link></li>
-                                                    <li><Link href="/vendors-list"><a>Vendors List</a></Link></li>
+                                                 
                                                     <li><Link href="/vendor-dashboard"><a>Vendor Dashboard</a></Link></li>
                                                     <li><Link href="/vendor-guide"><a>Vendor Guide</a></Link></li>
                                                 </ul>
@@ -582,7 +502,7 @@ const Header = ({
                                             <li className="position-static">
                                                 <Link href="/#">
                                                     <a>
-                                                        Mega menu
+                                                        Mega Menu
                                                         <i className="fi-rs-angle-down"></i>
                                                     </a>
                                                 </Link>
@@ -592,7 +512,7 @@ const Header = ({
                                                             className="menu-title"
                                                             href="#"
                                                         >
-                                                            Fruit & Vegetables
+                                                            Cannabis
                                                         </a>
                                                         <ul>
                                                             <li>

@@ -28,7 +28,7 @@ const CategoryProduct = ({ updateProductCategory }) => {
                             src="/assets/imgs/theme/icons/category-1.svg"
                             alt=""
                         />
-                        Milks & Dairies
+                        Indica
                     </a>
                     <span className="count">30</span>
                 </li>
@@ -38,7 +38,7 @@ const CategoryProduct = ({ updateProductCategory }) => {
                             src="/assets/imgs/theme/icons/category-2.svg"
                             alt=""
                         />
-                        Clothing
+                        Sativa
                     </a>
                     <span className="count">35</span>
                 </li>
@@ -48,7 +48,7 @@ const CategoryProduct = ({ updateProductCategory }) => {
                             src="/assets/imgs/theme/icons/category-3.svg"
                             alt=""
                         />
-                        Pet Foods{" "}
+                        Hybrids{" "}
                     </a>
                     <span className="count">42</span>
                 </li>                

@@ -35,7 +35,7 @@ const CategoryProduct2 = ({ updateProductCategory }) => {
                             src="/assets/imgs/theme/icons/category-1.svg"
                             alt=""
                         />
-                        Milks & Dairies
+                        Indica
                     </a>
                     
                 </li>
@@ -45,7 +45,7 @@ const CategoryProduct2 = ({ updateProductCategory }) => {
                             src="/assets/imgs/theme/icons/category-2.svg"
                             alt=""
                         />
-                        Clothing
+                        Sativa
                     </a>
                     
                 </li>
@@ -55,7 +55,7 @@ const CategoryProduct2 = ({ updateProductCategory }) => {
                             src="/assets/imgs/theme/icons/category-3.svg"
                             alt=""
                         />
-                        Pet Foods{" "}
+                        Hybrids{" "}
                     </a>
                     
                 </li>
@@ -65,7 +65,7 @@ const CategoryProduct2 = ({ updateProductCategory }) => {
                             src="/assets/imgs/theme/icons/category-4.svg"
                             alt=""
                         />
-                        Baking material
+                        Cannabis Gear
                     </a>
                     
                 </li>
@@ -75,7 +75,7 @@ const CategoryProduct2 = ({ updateProductCategory }) => {
                             src="/assets/imgs/theme/icons/category-5.svg"
                             alt=""
                         />
-                        Fresh Fruit
+                        Oils
                     </a>
                 </li>
             </ul>
