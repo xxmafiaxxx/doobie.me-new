@@ -6,11 +6,8 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { User } from "../models";
 import { FlexProps } from "@aws-amplify/ui-react";
-export declare type ProfileCardProps = React.PropsWithChildren<Partial<FlexProps> & {
-    userprofile?: User;
-} & {
+export declare type AddproductProps = React.PropsWithChildren<Partial<FlexProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function ProfileCard(props: ProfileCardProps): React.ReactElement;
+export default function Addproduct(props: AddproductProps): React.ReactElement;

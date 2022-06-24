@@ -23,7 +23,7 @@ export default function ActionCardCollection(props) {
   return (
     <Collection
       type="grid"
-      isSearchable={true}
+      isSearchable="true"
       isPaginated={true}
       searchPlaceholder="Search..."
       itemsPerPage={6}

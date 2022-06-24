@@ -6,7 +6,6 @@
 
 export { default as ReviewCard } from "./ReviewCard";
 export { default as StandardCard } from "./StandardCard";
-export { default as Vendorprofileupdate } from "./Vendorprofileupdate";
 export { default as FAQItem } from "./FAQItem";
 export { default as ContactUs } from "./ContactUs";
 export { default as ProductCard } from "./ProductCard";
@@ -16,6 +15,7 @@ export { default as Shoppingbagicons } from "./Shoppingbagicons";
 export { default as FormCheckout } from "./FormCheckout";
 export { default as NavBar } from "./NavBar";
 export { default as SideBar } from "./SideBar";
+export { default as Addproduct } from "./Addproduct";
 export { default as ProfileCard } from "./ProfileCard";
 export { default as Ampligram } from "./Ampligram";
 export { default as HeroLayout1 } from "./HeroLayout1";
@@ -26,6 +26,7 @@ export { default as HeroLayout2 } from "./HeroLayout2";
 export { default as Features2x2 } from "./Features2x2";
 export { default as EditProfile } from "./EditProfile";
 export { default as ProductCardCollection } from "./ProductCardCollection";
+export { default as Vendorprofileupdate } from "./Vendorprofileupdate";
 export { default as ProductCollection } from "./ProductCollection";
 export { default as HeroLayout3 } from "./HeroLayout3";
 export { default as ItemCard } from "./ItemCard";

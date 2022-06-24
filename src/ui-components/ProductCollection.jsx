@@ -22,8 +22,14 @@ export default function ProductCollection(props) {
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
     <Collection
-      type="list"
-      direction="column"
+      type="grid"
+      isSearchable={true}
+      isPaginated={true}
+      searchPlaceholder="Search..."
+      itemsPerPage={6}
+      templateColumns="1fr 1fr 1fr"
+      autoFlow="row"
+      alignItems="stretch"
       justifyContent="stretch"
       items={items || []}
       {...rest}

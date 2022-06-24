@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from "../components/layout/Layout";
 import ProductCardCollection  from '../src/ui-components/ActionCardCollection';
 import { Amplify } from 'aws-amplify';
-import { withAuthenticator, Authenticator, AmplifyProvider   } from '@aws-amplify/ui-react';
+import { withAuthenticator, Authenticator,AmplifyProvider   } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from '../src/aws-exports';
 

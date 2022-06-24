@@ -6,9 +6,13 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import {
-  Button,
+  getOverrideProps,
+  useDataStoreCreateAction,
+} from "@aws-amplify/ui-react/internal";
+import { Product } from "../models";
+import { schema } from "../models/schema";
+import {
   Divider,
   Flex,
   Icon,
@@ -17,22 +21,31 @@ import {
   TextField,
   View,
 } from "@aws-amplify/ui-react";
-export default function EditProfile(props) {
+export default function Addproduct(props) {
   const { overrides, ...rest } = props;
+  const labelOnClick = useDataStoreCreateAction({
+    fields: {},
+    model: Product,
+    schema: schema,
+  });
+  const buttonIconThreeOneSixTwoTwoSevenEightThreeOnClick =
+    useDataStoreCreateAction({ fields: {}, model: Product, schema: schema });
   return (
     <Flex
       gap="16px"
       direction="column"
       width="640px"
+      height="970px"
       position="relative"
       padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
-      {...getOverrideProps(overrides, "EditProfile")}
+      {...getOverrideProps(overrides, "Addproduct")}
     >
       <Flex
         gap="24px"
         direction="column"
+        height="970px"
         shrink="0"
         alignSelf="stretch"
         objectFit="cover"
@@ -49,7 +62,7 @@ export default function EditProfile(props) {
           objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Edit Profile29766913")}
+          {...getOverrideProps(overrides, "ass product")}
         >
           <View
             width="24px"
@@ -93,21 +106,10 @@ export default function EditProfile(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Edit Profile"
-            {...getOverrideProps(overrides, "Edit Profile29766916")}
+            children="Add Product"
+            {...getOverrideProps(overrides, "add product")}
           ></Text>
         </Flex>
-        <Divider
-          height="1px"
-          shrink="0"
-          alignSelf="stretch"
-          objectFit="cover"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          size="small"
-          orientation="horizontal"
-          {...getOverrideProps(overrides, "Divider29766917")}
-        ></Divider>
         <Flex
           gap="16px"
           direction="row"
@@ -150,11 +152,12 @@ export default function EditProfile(props) {
         <Flex
           gap="16px"
           direction="column"
+          height="753px"
           shrink="0"
           alignSelf="stretch"
           objectFit="cover"
           position="relative"
-          padding="0px 0px 0px 0px"
+          padding="0px 0px 252px 0px"
           {...getOverrideProps(overrides, "Forms")}
         >
           <TextField
@@ -167,13 +170,13 @@ export default function EditProfile(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            label="Name"
-            placeholder="John Doe"
+            label="Title"
+            placeholder="Enter product title"
             size="default"
             isDisabled={false}
             labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextField29766922")}
+            {...getOverrideProps(overrides, "name")}
           ></TextField>
           <TextField
             display="flex"
@@ -185,13 +188,13 @@ export default function EditProfile(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            label="Phone Number"
-            placeholder="718-555-1212"
+            label="Category"
+            placeholder="Category"
             size="default"
             isDisabled={false}
             labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextField29766923")}
+            {...getOverrideProps(overrides, "caregory")}
           ></TextField>
           <TextField
             display="flex"
@@ -203,14 +206,146 @@ export default function EditProfile(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            label="Email"
-            placeholder="john.doe@awsamplify.com"
+            label="Short Description"
+            placeholder="enter short product description"
             size="default"
             isDisabled={false}
             labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextField29766924")}
+            {...getOverrideProps(overrides, "sht desc")}
           ></TextField>
+          <TextField
+            display="flex"
+            gap="8px"
+            direction="column"
+            justifyContent="center"
+            shrink="0"
+            alignSelf="stretch"
+            objectFit="cover"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            label="Description"
+            placeholder="product description"
+            size="default"
+            isDisabled={false}
+            labelHidden={false}
+            variation="default"
+            {...getOverrideProps(overrides, "description")}
+          ></TextField>
+          <TextField
+            display="flex"
+            gap="8px"
+            direction="column"
+            justifyContent="center"
+            shrink="0"
+            alignSelf="stretch"
+            objectFit="cover"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            label="Effects"
+            placeholder="product effects"
+            size="default"
+            isDisabled={false}
+            labelHidden={false}
+            variation="default"
+            {...getOverrideProps(overrides, "effects")}
+          ></TextField>
+          <TextField
+            display="flex"
+            gap="8px"
+            direction="column"
+            width="228px"
+            height="78px"
+            justifyContent="center"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            label="Amount Available"
+            placeholder="#"
+            size="default"
+            isDisabled={false}
+            labelHidden={false}
+            variation="default"
+            {...getOverrideProps(overrides, "amt avail")}
+          ></TextField>
+          <TextField
+            display="flex"
+            gap="8px"
+            direction="column"
+            width="228px"
+            height="78px"
+            justifyContent="center"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            label="Price"
+            placeholder="$"
+            size="default"
+            isDisabled={false}
+            labelHidden={false}
+            variation="default"
+            {...getOverrideProps(overrides, "price")}
+          ></TextField>
+          <Flex
+            gap="0"
+            direction="row"
+            width="fit-content"
+            justifyContent="flex-end"
+            alignItems="flex-end"
+            shrink="0"
+            position="relative"
+            border="1px SOLID rgba(0,0,0,0)"
+            borderRadius="4px"
+            padding="7px 15px 7px 15px"
+            backgroundColor="rgba(4,125,149,1)"
+            {...getOverrideProps(overrides, "Button")}
+          >
+            <Icon
+              width="16px"
+              height="16px"
+              shrink="0"
+              overflow="hidden"
+              position="relative"
+              padding="0px 0px 0px 0px"
+              type="none"
+              fontSize="16px"
+              {...getOverrideProps(overrides, "Button Icon31622781")}
+            ></Icon>
+            <Text
+              fontFamily="Inter"
+              fontSize="16px"
+              fontWeight="700"
+              color="rgba(255,255,255,1)"
+              lineHeight="24px"
+              textAlign="left"
+              display="flex"
+              direction="column"
+              justifyContent="center"
+              shrink="0"
+              position="relative"
+              padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
+              children="Upload"
+              onClick={() => {
+                labelOnClick();
+              }}
+              {...getOverrideProps(overrides, "label")}
+            ></Text>
+            <Icon
+              width="16px"
+              height="16px"
+              shrink="0"
+              overflow="hidden"
+              position="relative"
+              padding="0px 0px 0px 0px"
+              type="none"
+              fontSize="16px"
+              onClick={() => {
+                buttonIconThreeOneSixTwoTwoSevenEightThreeOnClick();
+              }}
+              {...getOverrideProps(overrides, "Button Icon31622783")}
+            ></Icon>
+          </Flex>
         </Flex>
         <Divider
           height="1px"
@@ -221,23 +356,8 @@ export default function EditProfile(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Divider29766925")}
+          {...getOverrideProps(overrides, "Divider")}
         ></Divider>
-        <Button
-          display="flex"
-          gap="0"
-          direction="row"
-          width="fit-content"
-          justifyContent="center"
-          alignItems="center"
-          shrink="0"
-          position="relative"
-          size="default"
-          isDisabled={false}
-          variation="primary"
-          children="Save"
-          {...getOverrideProps(overrides, "Button")}
-        ></Button>
       </Flex>
     </Flex>
   );

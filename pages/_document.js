@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript, Script } from 'next/document'
 import { Amplify, Auth } from "aws-amplify";
 import aws_exports from "../src/aws-exports";
 import {AmplifyProvider  } from "@aws-amplify/ui-react";
-import "@aws-amplify/ui-react/styles.css";
+
 
 Amplify.configure(aws_exports);
 class MyDocument extends Document {
