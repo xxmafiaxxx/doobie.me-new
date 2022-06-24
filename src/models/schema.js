@@ -78,7 +78,7 @@ export const schema = {
                                 "provider": "userPools",
                                 "allow": "groups",
                                 "groups": [
-                                    "Admin, Vendors"
+                                    "Admin, Vendors,Dispensaries"
                                 ],
                                 "operations": [
                                     "create",
@@ -594,45 +594,24 @@ export const schema = {
                     "properties": {
                         "rules": [
                             {
-                                "groupClaim": "cognito:groups",
-                                "provider": "userPools",
-                                "allow": "groups",
-                                "groups": [
-                                    "Admin, Vendors,Dispensaries"
-                                ],
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "read",
-                                    "delete"
-                                ]
-                            },
-                            {
-                                "allow": "private",
-                                "operations": [
-                                    "read",
-                                    "create",
-                                    "update",
-                                    "delete"
-                                ]
-                            },
-                            {
                                 "allow": "public",
                                 "operations": [
                                     "read"
                                 ]
                             },
                             {
+                                "groupClaim": "cognito:groups",
                                 "provider": "userPools",
-                                "ownerField": "owner",
-                                "allow": "owner",
+                                "allow": "groups",
+                                "groups": [
+                                    "Admin, Dispensaries"
+                                ],
                                 "operations": [
                                     "read",
+                                    "create",
                                     "update",
-                                    "delete",
-                                    "create"
-                                ],
-                                "identityClaim": "cognito:username"
+                                    "delete"
+                                ]
                             }
                         ]
                     }
