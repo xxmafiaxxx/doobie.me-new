@@ -799,7 +799,7 @@ strong,
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: end;
+  align-items: flex-end;
   margin-bottom: 44px;
   position: relative;
   -webkit-box-pack: justify;
@@ -5854,7 +5854,7 @@ table.no-border thead {
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
