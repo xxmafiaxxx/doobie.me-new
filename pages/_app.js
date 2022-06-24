@@ -24,18 +24,10 @@ import StorageWrapper from "../components/ecommerce/storage-wrapper";
 import "../public/assets/css/main.css";
 import store from "../redux/store";
 import Preloader from "./../components/elements/Preloader";
-import { Amplify, Auth } from "aws-amplify";
-import aws_exports from "../src/aws-exports";
-import { withAuthenticator, Authenticator, AmplifyProvider  } from "@aws-amplify/ui-react";
-import "@aws-amplify/ui-react/styles.css";
 
-Amplify.configure(aws_exports);
 
 function MyApp({ Component, pageProps }) {
-    //Webhooks
-//const CoinbaseWebHook = React.lazy(() =>
-//import("../components/WebHooks/coinbase-commerce-webhook.jsx")
-//);
+ 
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         setLoading(true);
@@ -48,7 +40,7 @@ function MyApp({ Component, pageProps }) {
         //   }).init()
     }, []);
     return (
-        <AmplifyProvider>
+     <>
             {!loading ? (
                 <Provider store={store}>
                     <StorageWrapper>
@@ -61,7 +53,7 @@ function MyApp({ Component, pageProps }) {
                 <Preloader />
             )}
            
-           </AmplifyProvider>
+           </>     
     );
 }
 

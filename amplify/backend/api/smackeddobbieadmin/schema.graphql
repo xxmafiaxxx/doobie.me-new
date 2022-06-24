@@ -75,7 +75,7 @@ type S3Object {
   region: String!
 }
 
-type Worker @model @auth(rules: [{allow: owner, operations: [read, update, delete]}, {allow: groups, groups: ["Admin"]}]) {
+type Worker @model @auth(rules: [{allow: owner, operations: [read, update, delete]}, {allow: groups, groups: ["Admin, Vendors,Dispensaries"]}]) {
   id: ID!
   accountActive: Boolean
   name: String
@@ -123,10 +123,11 @@ type User @model @auth(rules: [{allow: owner}, {allow: public, operations: [read
   id: ID!
   Email: AWSEmail
   memberSince: AWSDate
+  profImg: String
   Orders: [Order] @hasMany
   name: String
   productLikes: Int
-  Tips: String
+  Tips: Int
   referredBy: Referrals @hasOne
 }
 
