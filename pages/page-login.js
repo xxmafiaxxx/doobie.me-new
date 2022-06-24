@@ -64,7 +64,6 @@ function Login() {
                     </div>
                 </div>
                 </div>
-                <button onClick={signOut}>Sign out</button>
             </Layout>
         </>
     );
