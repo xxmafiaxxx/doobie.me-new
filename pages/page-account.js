@@ -44,7 +44,7 @@ function Account({})  {
                                                     <a className={activeIndex === 5 ? "nav-link active" : "nav-link"}  onClick={() => handleOnClick(5)}><i className="fi-rs-user mr-10"></i>Account details</a>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <Link href="/page-login"><a className="nav-link"><i className="fi-rs-sign-out mr-10"></i>Logout</a></Link>
+                                                    <Link href="/page-account"><a className="nav-link"  onClick={signOut}><i className="fi-rs-sign-out mr-10"></i>Logout</a></Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -219,7 +219,7 @@ function Account({})  {
                                 </div>
                             </div>
                         </div>
-                        <button onClick={signOut}>Sign out</button>
+                        
                     </div>
                 </div>
                 </Layout>
