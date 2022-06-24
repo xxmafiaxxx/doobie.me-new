@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
         //   }).init()
     }, []);
     return (
-        <> <Authenticator>
+        <> 
             {!loading ? (
                 <Provider store={store}>
                     <StorageWrapper>
@@ -60,7 +60,7 @@ function MyApp({ Component, pageProps }) {
             ) : (
                 <Preloader />
             )}
-            </Authenticator>
+           
         </>
     );
 }

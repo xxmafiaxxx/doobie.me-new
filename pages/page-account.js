@@ -6,7 +6,7 @@ import { withAuthenticator, Authenticator   } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from '../src/aws-exports';
 Amplify.configure(awsExports);
-function Account({ signOut, user }) {
+function Account({})  {
     
 
     const [activeIndex, setActiveIndex] = useState(1);
@@ -17,7 +17,8 @@ function Account({ signOut, user }) {
 
 
     return (
-        <>
+        <Authenticator>
+            {({ signOut, user }) => (
             <Layout parent="Home" sub="Pages" subChild="Account">
                 <div className="page-content pt-150 pb-150">
                     <div className="container">
@@ -221,8 +222,9 @@ function Account({ signOut, user }) {
                         <button onClick={signOut}>Sign out</button>
                     </div>
                 </div>
-            </Layout>
-        </>
+                </Layout>
+                )}
+            </Authenticator>
     );
 }
 
