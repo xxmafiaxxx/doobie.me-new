@@ -351,6 +351,15 @@ export const schema = {
                     "properties": {}
                 },
                 {
+                    "type": "key",
+                    "properties": {
+                        "name": "vendorUsername",
+                        "fields": [
+                            "username"
+                        ]
+                    }
+                },
+                {
                     "type": "auth",
                     "properties": {
                         "rules": [
@@ -538,6 +547,13 @@ export const schema = {
                     "type": "ID",
                     "isRequired": false,
                     "attributes": []
+                },
+                "orderNameId": {
+                    "name": "orderNameId",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
                 }
             },
             "syncable": true,
@@ -546,6 +562,32 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "fields": [
+                            "id"
+                        ]
+                    }
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "Product_title_idx",
+                        "fields": [
+                            "title"
+                        ]
+                    }
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "Imgurl_idx",
+                        "fields": [
+                            "image_url"
+                        ]
+                    }
                 },
                 {
                     "type": "auth",
@@ -607,10 +649,10 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "accountStatus": {
-                    "name": "accountStatus",
+                "accountActive": {
+                    "name": "accountActive",
                     "isArray": false,
-                    "type": "String",
+                    "type": "Boolean",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -666,7 +708,7 @@ export const schema = {
                 "email": {
                     "name": "email",
                     "isArray": false,
-                    "type": "String",
+                    "type": "AWSEmail",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -761,8 +803,29 @@ export const schema = {
                 },
                 "name": {
                     "name": "name",
+                    "isArray": true,
+                    "type": {
+                        "model": "Product"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true,
+                    "association": {
+                        "connectionType": "HAS_MANY",
+                        "associatedWith": "orderNameId"
+                    }
+                },
+                "img": {
+                    "name": "img",
                     "isArray": false,
                     "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "date": {
+                    "name": "date",
+                    "isArray": false,
+                    "type": "AWSDateTime",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -792,6 +855,13 @@ export const schema = {
                     "name": "quantity",
                     "isArray": false,
                     "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "OrderTotal": {
+                    "name": "OrderTotal",
+                    "isArray": false,
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -1422,5 +1492,5 @@ export const schema = {
             }
         }
     },
-    "version": "a38b08f1c081cfd0c515dfedfcdbcc4a"
+    "version": "b5c129929e1d943e3122f73e37af3099"
 };

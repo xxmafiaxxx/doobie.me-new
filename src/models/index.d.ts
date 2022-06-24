@@ -182,13 +182,14 @@ export declare class Product {
   readonly AmtSold?: number | null;
   readonly updatedAt?: string | null;
   readonly vendorProductsId?: string | null;
+  readonly orderNameId?: string | null;
   constructor(init: ModelInit<Product, ProductMetaData>);
   static copyOf(source: Product, mutator: (draft: MutableModel<Product, ProductMetaData>) => MutableModel<Product, ProductMetaData> | void): Product;
 }
 
 export declare class Worker {
   readonly id: string;
-  readonly accountStatus?: string | null;
+  readonly accountActive?: boolean | null;
   readonly name?: string | null;
   readonly phone?: string | null;
   readonly dob?: string | null;
@@ -208,10 +209,13 @@ export declare class Worker {
 
 export declare class Order {
   readonly id: string;
-  readonly name?: string | null;
+  readonly name?: (Product | null)[] | null;
+  readonly img?: string | null;
+  readonly date?: string | null;
   readonly user?: User | null;
   readonly Status?: OrderStatus | keyof typeof OrderStatus | null;
   readonly quantity?: number | null;
+  readonly OrderTotal?: number | null;
   readonly productorder?: (ProductOrder | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;

@@ -33,7 +33,7 @@ export { default as Features2x3 } from "./Features2x3";
 export { default as SocialPost } from "./SocialPost";
 export { default as ActionCardCollection } from "./ActionCardCollection";
 export { default as MarketingFooter } from "./MarketingFooter";
-export { default as CommentCard } from "./CommentCard";
+export { default as ProductOrders } from "./ProductOrders";
 export { default as Features4x1 } from "./Features4x1";
 export { default as HeroLayout4 } from "./HeroLayout4";
 export { default as ActionCard } from "./ActionCard";
