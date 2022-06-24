@@ -69,18 +69,20 @@ const MessageStatus = {
   "DELETED": "DELETED"
 };
 
-const { Todo, Vendor, Product, Worker, Order, User, Referrals, ProductOrder, Cart, S3Object } = initSchema(schema);
+const { Task, PrivateNote, Todo, Vendor, Product, Worker, Order, User, Cart, Referrals, ProductOrder, S3Object } = initSchema(schema);
 
 export {
+  Task,
+  PrivateNote,
   Todo,
   Vendor,
   Product,
   Worker,
   Order,
   User,
+  Cart,
   Referrals,
   ProductOrder,
-  Cart,
   ProductCategory,
   Effects,
   OrderStatus,

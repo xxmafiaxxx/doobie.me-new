@@ -3,13 +3,28 @@
 
 const awsmobile = {
     "aws_project_region": "us-east-1",
-    "aws_cognito_identity_pool_id": "us-east-1:3127bd5c-d4b6-42a5-a782-8253e6d74856",
+    "aws_cognito_identity_pool_id": "us-east-1:b8556ee5-924b-4e4a-a26a-d86b698778d7",
     "aws_cognito_region": "us-east-1",
-    "aws_user_pools_id": "us-east-1_da1gvOdAy",
-    "aws_user_pools_web_client_id": "136ga9dehrbk22aqgcc7dbgjb7",
-    "oauth": {},
+    "aws_user_pools_id": "us-east-1_Nw6YSasrP",
+    "aws_user_pools_web_client_id": "74kchqtic9suc40djq00fdcf5c",
+    "oauth": {
+        "domain": "smackeddobbieadmin232ea2c2-232ea2c2-budman.auth.us-east-1.amazoncognito.com",
+        "scope": [
+            "phone",
+            "email",
+            "openid",
+            "profile",
+            "aws.cognito.signin.user.admin"
+        ],
+        "redirectSignIn": "https://www.doobie.me/page-login/",
+        "redirectSignOut": "https://www.doobie.me/page-logout/",
+        "responseType": "code"
+    },
+    "federationTarget": "COGNITO_USER_POOLS",
     "aws_cognito_username_attributes": [],
-    "aws_cognito_social_providers": [],
+    "aws_cognito_social_providers": [
+        "FACEBOOK"
+    ],
     "aws_cognito_signup_attributes": [
         "EMAIL"
     ],
@@ -24,10 +39,10 @@ const awsmobile = {
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
     ],
-    "aws_appsync_graphqlEndpoint": "https://37gmky2jibfv5bln2biwhllsje.appsync-api.us-east-1.amazonaws.com/graphql",
+    "aws_appsync_graphqlEndpoint": "https://yhte5c23ffepbj3vjnywaakxvu.appsync-api.us-east-1.amazonaws.com/graphql",
     "aws_appsync_region": "us-east-1",
-    "aws_appsync_authenticationType": "API_KEY",
-    "aws_appsync_apiKey": "da2-morjgtoi4ranfc6sgv6vbepoxi",
+    "aws_appsync_authenticationType": "AMAZON_COGNITO_USER_POOLS",
+    "aws_appsync_apiKey": "da2-kws7rvdscffjlfggnud634us6y",
     "aws_user_files_s3_bucket": "smackeddobbieadmin-storage-d32qiutu9hfma3214854-budman",
     "aws_user_files_s3_bucket_region": "us-east-1"
 };

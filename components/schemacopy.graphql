@@ -1,23 +1,3 @@
-
-
-type Task
-  @model
-  @auth(
-    rules: [
-      { allow: groups, groups: ["Managers"], operations: [create, update, read, delete] }
-      { allow: groups, groups: ["Employees"], operations: [read] }
-    ]
-  ) {
-  id: ID!
-  title: String!
-  description: String
-  status: String
-}
-
-type PrivateNote @model @auth(rules: [{ allow: owner }]) {
-  id: ID!
-  content: String!
-}
 type Todo @model @auth(rules: [{allow: groups, groups: ["Admin, Vendors,Dispensaries"], operations: [create, read, update, delete]}]) {
   id: ID!
   name: String!
@@ -29,7 +9,7 @@ type Todo @model @auth(rules: [{allow: groups, groups: ["Admin, Vendors,Dispensa
 type Vendor @model @auth(rules: [{allow: owner, operations: [create, read, update, delete]}, {allow: groups, groups: ["Admin, Vendors"]}, {allow: private, operations: [read]}]) {
   id: ID!
   name: String
-  username: String 
+  username: String @index(name: "vendorUsername")
   email: AWSEmail
   address: String
   address2: String
@@ -53,8 +33,6 @@ type Vendor @model @auth(rules: [{allow: owner, operations: [create, read, updat
   storeState: String
   storeInsured: String
   mobileSeller: Boolean
-  upvotes: Int 
-  downvotes: Int 
   planSelected: String
   feedback: String
   doobieCode: Int
@@ -64,22 +42,20 @@ type Vendor @model @auth(rules: [{allow: owner, operations: [create, read, updat
 
 type Product @model 
 @auth(rules: [{allow: public,operations: [read]}
-{ allow: groups, groups: ["Admin, Dispensaries, Vendors"], operations: [read, create, update, delete] }
+{ allow: groups, groups: ["Admin, Dispensaries"], operations: [read, create, update, delete] }
 
 ] )
 {
-  id: ID!
+  id: ID! @primaryKey 
   createdAt: AWSDateTime
-  title: String!
+  title: String! @index (name: "Product_title_idx")
   Available: Boolean
   category: ProductCategory
   currentInventory: Int!
-  image_url: String
+  image_url: String @index(name: "Imgurl_idx")
   Featured: Boolean
   rating: Float
   price: Float!
-  upvotes: Int 
-  downvotes: Int 
   shortDescription: String
   description: String
   effects: Effects
@@ -96,8 +72,7 @@ type S3Object {
   region: String!
 }
 
-type Worker @model 
-@auth(rules: [{allow: owner, operations: [read, update, delete]}, {allow: groups, groups: ["Admin"]}]) {
+type Worker @model @auth(rules: [{allow: owner, operations: [read, update, delete]}, {allow: groups, groups: ["Admin"]}]) {
   id: ID!
   accountActive: Boolean
   name: String
@@ -115,14 +90,14 @@ type Worker @model
 
 type Order @model @auth(rules: [{allow: owner, operations: [create, read, update, delete]}, {allow: groups, groups: ["Admin"], operations: [delete]}]) {
   id: ID!
-  name: String
+  name: [Product] @hasMany
   img: String
   date: AWSDateTime
-  user: User 
+  user: User @belongsTo
   Status: OrderStatus
   quantity: Int
   OrderTotal: Float
-  FilledBy: [Vendor] @hasMany
+  FilledBy: Vendor 
   productorder: [ProductOrder] @hasMany
 }
 
@@ -131,7 +106,6 @@ type ProductOrder @model @auth(rules: [{allow: owner, operations: [create, read,
   weight: String
   date: String
   quantity: Int
-  Status: OrderStatus
 }
 
 type Cart @model @auth(rules: [{allow: owner, operations: [create, read, update, delete]}, {allow: groups, groups: ["Admin"], operations: [delete]}]) {
@@ -140,8 +114,6 @@ type Cart @model @auth(rules: [{allow: owner, operations: [create, read, update,
   image: String
   price: Float
   amount: Int
-  cartTotal: Int
-  User: User @belongsTo
 }
 
 type User @model @auth(rules: [{allow: owner, operations: [create, read, update, delete]}, {allow: public, operations: [read]}, {allow: groups, groups: ["Admin"]}]) {
@@ -149,14 +121,13 @@ type User @model @auth(rules: [{allow: owner, operations: [create, read, update,
   Email: AWSEmail
   memberSince: AWSDate
   Orders: [Order] @hasMany
-  shoppingCart: [Cart] @hasMany
   name: String
   productLikes: Int
-  Tips: Float
+  Tips: String
   referredBy: Referrals @hasOne
 }
 
-type Referrals @model @auth(rules: [{allow: owner, operations: [create, read]}, {allow: public, operations: [read]}, {allow: groups, groups: ["Admin"]}]) {
+type Referrals @model @auth(rules: [{allow: owner, operations: [create, read, update]}, {allow: public, operations: [read]}, {allow: groups, groups: ["Admin"]}]) {
   id: ID
   Email: AWSEmail
   ReferredBy: String
@@ -231,3 +202,4 @@ enum ProductCategory {
   GEAR
   APPAREL
 }
+ 

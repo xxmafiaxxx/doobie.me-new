@@ -1,10 +1,5 @@
 import Document, { Html, Head, Main, NextScript, Script } from 'next/document'
-import { Amplify, Auth } from "aws-amplify";
-import aws_exports from "../src/aws-exports";
-import {AmplifyProvider  } from "@aws-amplify/ui-react";
 
-
-Amplify.configure(aws_exports);
 class MyDocument extends Document {
 
     static async getInitialProps(ctx) {
@@ -16,7 +11,7 @@ class MyDocument extends Document {
         const {locale} = this.props.__NEXT_DATA__ 
         const dir = locale === 'ar' ? 'rtl' : 'ltr';
         return (
-            <AmplifyProvider>
+            
             <Html dir={dir} lang={locale}>
                 <Head>
                 <meta name="facebook-domain-verification" content="o40376jeco0o7i1q7o8x0d04xf49if" />
@@ -45,7 +40,7 @@ class MyDocument extends Document {
                     <NextScript />
                 </body>
                 </Html>
-                </AmplifyProvider>
+               
         )
     }
 }

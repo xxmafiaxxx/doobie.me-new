@@ -12,9 +12,6 @@
       "AmplifyAppId": "d1u8o2z4nigaxi"
     },
     "categories": {
-      "auth": {
-        "smackeddobbieadmin87364adf": {}
-      },
       "function": {
         "ProcessPayment": {
           "deploymentBucketName": "amplify-smackeddobbieadmin-budman-214854-deployment",
@@ -32,6 +29,9 @@
           "deploymentBucketName": "amplify-smackeddobbieadmin-budman-214854-deployment",
           "s3Key": "amplify-builds/sendEmailToMe-70455039673671563144-build.zip"
         }
+      },
+      "auth": {
+        "smackeddobbieadmin232ea2c2": {}
       }
     }
   }

@@ -74,6 +74,14 @@ export declare class S3Object {
   constructor(init: ModelInit<S3Object>);
 }
 
+type TaskMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type PrivateNoteMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
 type TodoMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
@@ -98,6 +106,10 @@ type UserMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
+type CartMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
 type ReferralsMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
@@ -106,8 +118,24 @@ type ProductOrderMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-type CartMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
+export declare class Task {
+  readonly id: string;
+  readonly title: string;
+  readonly description?: string | null;
+  readonly status?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<Task, TaskMetaData>);
+  static copyOf(source: Task, mutator: (draft: MutableModel<Task, TaskMetaData>) => MutableModel<Task, TaskMetaData> | void): Task;
+}
+
+export declare class PrivateNote {
+  readonly id: string;
+  readonly content: string;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<PrivateNote, PrivateNoteMetaData>);
+  static copyOf(source: PrivateNote, mutator: (draft: MutableModel<PrivateNote, PrivateNoteMetaData>) => MutableModel<PrivateNote, PrivateNoteMetaData> | void): PrivateNote;
 }
 
 export declare class Todo {
@@ -150,6 +178,8 @@ export declare class Vendor {
   readonly storeState?: string | null;
   readonly storeInsured?: string | null;
   readonly mobileSeller?: boolean | null;
+  readonly upvotes?: number | null;
+  readonly downvotes?: number | null;
   readonly planSelected?: string | null;
   readonly feedback?: string | null;
   readonly doobieCode?: number | null;
@@ -157,6 +187,7 @@ export declare class Vendor {
   readonly products?: (Product | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
+  readonly orderFilledById?: string | null;
   constructor(init: ModelInit<Vendor, VendorMetaData>);
   static copyOf(source: Vendor, mutator: (draft: MutableModel<Vendor, VendorMetaData>) => MutableModel<Vendor, VendorMetaData> | void): Vendor;
 }
@@ -172,6 +203,8 @@ export declare class Product {
   readonly Featured?: boolean | null;
   readonly rating?: number | null;
   readonly price: number;
+  readonly upvotes?: number | null;
+  readonly downvotes?: number | null;
   readonly shortDescription?: string | null;
   readonly description?: string | null;
   readonly effects?: Effects | keyof typeof Effects | null;
@@ -182,7 +215,6 @@ export declare class Product {
   readonly AmtSold?: number | null;
   readonly updatedAt?: string | null;
   readonly vendorProductsId?: string | null;
-  readonly orderNameId?: string | null;
   constructor(init: ModelInit<Product, ProductMetaData>);
   static copyOf(source: Product, mutator: (draft: MutableModel<Product, ProductMetaData>) => MutableModel<Product, ProductMetaData> | void): Product;
 }
@@ -209,16 +241,17 @@ export declare class Worker {
 
 export declare class Order {
   readonly id: string;
-  readonly name?: (Product | null)[] | null;
+  readonly name?: string | null;
   readonly img?: string | null;
   readonly date?: string | null;
-  readonly user?: User | null;
   readonly Status?: OrderStatus | keyof typeof OrderStatus | null;
   readonly quantity?: number | null;
   readonly OrderTotal?: number | null;
+  readonly FilledBy?: (Vendor | null)[] | null;
   readonly productorder?: (ProductOrder | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
+  readonly userOrdersId?: string | null;
   constructor(init: ModelInit<Order, OrderMetaData>);
   static copyOf(source: Order, mutator: (draft: MutableModel<Order, OrderMetaData>) => MutableModel<Order, OrderMetaData> | void): Order;
 }
@@ -228,6 +261,7 @@ export declare class User {
   readonly Email?: string | null;
   readonly memberSince?: string | null;
   readonly Orders?: (Order | null)[] | null;
+  readonly shoppingCart?: (Cart | null)[] | null;
   readonly name?: string | null;
   readonly productLikes?: number | null;
   readonly Tips?: string | null;
@@ -237,6 +271,20 @@ export declare class User {
   readonly userReferredById?: string | null;
   constructor(init: ModelInit<User, UserMetaData>);
   static copyOf(source: User, mutator: (draft: MutableModel<User, UserMetaData>) => MutableModel<User, UserMetaData> | void): User;
+}
+
+export declare class Cart {
+  readonly id: string;
+  readonly title?: string | null;
+  readonly image?: string | null;
+  readonly price?: number | null;
+  readonly amount?: number | null;
+  readonly cartTotal?: number | null;
+  readonly User?: User | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<Cart, CartMetaData>);
+  static copyOf(source: Cart, mutator: (draft: MutableModel<Cart, CartMetaData>) => MutableModel<Cart, CartMetaData> | void): Cart;
 }
 
 export declare class Referrals {
@@ -257,21 +305,10 @@ export declare class ProductOrder {
   readonly weight?: string | null;
   readonly date?: string | null;
   readonly quantity?: number | null;
+  readonly Status?: OrderStatus | keyof typeof OrderStatus | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   readonly orderProductorderId?: string | null;
   constructor(init: ModelInit<ProductOrder, ProductOrderMetaData>);
   static copyOf(source: ProductOrder, mutator: (draft: MutableModel<ProductOrder, ProductOrderMetaData>) => MutableModel<ProductOrder, ProductOrderMetaData> | void): ProductOrder;
-}
-
-export declare class Cart {
-  readonly id: string;
-  readonly title?: string | null;
-  readonly image?: string | null;
-  readonly price?: number | null;
-  readonly amount?: number | null;
-  readonly createdAt?: string | null;
-  readonly updatedAt?: string | null;
-  constructor(init: ModelInit<Cart, CartMetaData>);
-  static copyOf(source: Cart, mutator: (draft: MutableModel<Cart, CartMetaData>) => MutableModel<Cart, CartMetaData> | void): Cart;
 }

@@ -3,25 +3,23 @@
   "serviceConfiguration": {
     "apiName": "smackeddobbieadmin",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "/tmp/amplify-b978eb74-98d0-48ea-8faf-720f3d5940cf/amplify/backend/api/smackeddobbieadmin/schema.graphql",
+    "gqlSchemaPath": "E:\\programming related\\app development\\doobie-new\\Nest-nextjs-v3.0-unzip-first\\doobie.me\\amplify\\backend\\api\\smackeddobbieadmin\\schema.graphql",
     "defaultAuthType": {
-      "mode": "API_KEY",
-      "keyDescription": "api key description",
-      "expirationTime": 30
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authsmackeddobbieadmin232ea2c2"
     },
-    "additionalAuthTypes": [
-      {
-        "mode": "AWS_IAM"
-      },
-      {
-        "mode": "AMAZON_COGNITO_USER_POOLS",
-        "cognitoUserPoolId": "authsmackeddobbieadmin87364adf"
-      }
-    ],
     "conflictResolution": {
       "defaultResolutionStrategy": {
         "type": "AUTOMERGE"
       }
-    }
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 60,
+        "apiKeyExpirationDate": "2022-08-23T10:24:42.402Z",
+        "keyDescription": "apikey"
+      }
+    ]
   }
 }

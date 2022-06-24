@@ -1,12 +1,14 @@
 {
   "auth": {
-    "smackeddobbieadmin87364adf": {
+    "smackeddobbieadmin232ea2c2": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
-        "socialProviders": [],
+        "socialProviders": [
+          "FACEBOOK"
+        ],
         "usernameAttributes": [],
         "signupAttributes": [
           "EMAIL"
@@ -32,7 +34,7 @@
       "dependsOn": [
         {
           "category": "auth",
-          "resourceName": "smackeddobbieadmin87364adf",
+          "resourceName": "smackeddobbieadmin232ea2c2",
           "attributes": [
             "UserPoolId"
           ]
@@ -41,20 +43,18 @@
       "output": {
         "authConfig": {
           "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 30,
-              "description": "api key description"
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authsmackeddobbieadmin232ea2c2"
             }
           },
           "additionalAuthenticationProviders": [
             {
-              "authenticationType": "AWS_IAM"
-            },
-            {
-              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-              "userPoolConfig": {
-                "userPoolId": "authsmackeddobbieadmin87364adf"
+              "authenticationType": "API_KEY",
+              "apiKeyConfig": {
+                "apiKeyExpirationDays": 60,
+                "apiKeyExpirationDate": "2022-08-23T10:24:42.402Z",
+                "description": "apikey"
               }
             }
           ]

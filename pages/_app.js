@@ -25,7 +25,12 @@ import "../public/assets/css/main.css";
 import store from "../redux/store";
 import Preloader from "./../components/elements/Preloader";
 import "@aws-amplify/ui-react/styles.css";
+import { Amplify, Auth } from "aws-amplify";
+import aws_exports from "../src/aws-exports";
+import {AmplifyProvider  } from "@aws-amplify/ui-react";
 
+
+Amplify.configure({ aws_exports, ssr: true });
 function MyApp({ Component, pageProps }) {
  
     const [loading, setLoading] = useState(false);
