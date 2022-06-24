@@ -22,8 +22,14 @@ export default function ActionCardCollection(props) {
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
     <Collection
-      type="list"
-      direction="column"
+      type="grid"
+      isSearchable={true}
+      isPaginated={true}
+      searchPlaceholder="Search..."
+      itemsPerPage={6}
+      templateColumns="1fr 1fr 1fr"
+      autoFlow="row"
+      alignItems="stretch"
       justifyContent="stretch"
       items={items || []}
       {...rest}
@@ -32,6 +38,9 @@ export default function ActionCardCollection(props) {
       {(item, index) => (
         <ActionCard
           product={item}
+          height="auto"
+          width="auto"
+          margin="2px 2px 2px 2px"
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
         ></ActionCard>

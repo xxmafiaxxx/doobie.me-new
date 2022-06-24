@@ -90,7 +90,7 @@ type Worker @model @auth(rules: [{allow: owner, operations: [read, update, delet
 
 type Order @model @auth(rules: [{allow: owner, operations: [create, read, update, delete]}, {allow: groups, groups: ["Admin"], operations: [delete]}]) {
   id: ID!
-  name: [Product] @hasMany(indexName: "Product_title_idx")
+  name: [Product] @hasMany
   img: String
   date: AWSDateTime
   user: User @belongsTo

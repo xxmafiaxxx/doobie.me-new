@@ -23,6 +23,10 @@ export default function ProductCardCollection(props) {
   return (
     <Collection
       type="list"
+      isSearchable={true}
+      isPaginated={true}
+      searchPlaceholder="Search..."
+      itemsPerPage={6}
       direction="column"
       justifyContent="stretch"
       items={items || []}
@@ -32,6 +36,7 @@ export default function ProductCardCollection(props) {
       {(item, index) => (
         <ProductCard
           procuctCard={item}
+          margin="5px 5px 5px 5px"
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
         ></ProductCard>
