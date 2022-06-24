@@ -26,7 +26,7 @@ import store from "../redux/store";
 import Preloader from "./../components/elements/Preloader";
 import { Amplify, Auth } from "aws-amplify";
 import aws_exports from "../src/aws-exports";
-import { withAuthenticator } from "@aws-amplify/ui-react";
+import { withAuthenticator, Authenticator  } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
 Amplify.configure(aws_exports);
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
         //   }).init()
     }, []);
     return (
-        <>
+        <> <Authenticator>
             {!loading ? (
                 <Provider store={store}>
                     <StorageWrapper>
@@ -60,6 +60,7 @@ function MyApp({ Component, pageProps }) {
             ) : (
                 <Preloader />
             )}
+            </Authenticator>
         </>
     );
 }

@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Layout from "../components/layout/Layout";
-
+import { Amplify } from 'aws-amplify';
+import { withAuthenticator, Authenticator   } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import awsExports from '../src/aws-exports';
+Amplify.configure(awsExports);
 
 function Login() {
     return (
@@ -59,7 +63,8 @@ function Login() {
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+                <button onClick={signOut}>Sign out</button>
             </Layout>
         </>
     );

@@ -1,8 +1,13 @@
 import Layout from "../components/layout/Layout";
 import Link from "next/link"
 import React, { useState } from "react";
-
-function Account() {
+import { Amplify } from 'aws-amplify';
+import { withAuthenticator, Authenticator   } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import awsExports from '../src/aws-exports';
+Amplify.configure(awsExports);
+function Account({ signOut, user }) {
+    
 
     const [activeIndex, setActiveIndex] = useState(1);
 
@@ -48,7 +53,7 @@ function Account() {
                                             <div className={activeIndex === 1 ? "tab-pane fade active show" : "tab-pane fade "} >
                                                 <div className="card">
                                                     <div className="card-header">
-                                                        <h3 className="mb-0">Hello Rosie!</h3>
+                                                        <h3 className="mb-0">Hello {user.username}</h3>
                                                     </div>
                                                     <div className="card-body">
                                                         <p>
@@ -213,6 +218,7 @@ function Account() {
                                 </div>
                             </div>
                         </div>
+                        <button onClick={signOut}>Sign out</button>
                     </div>
                 </div>
             </Layout>
