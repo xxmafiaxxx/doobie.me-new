@@ -1,23 +1,15 @@
-
-
-type Task
-  @model
-  @auth(
-    rules: [
-      { allow: groups, groups: ["Managers"], operations: [create, update, read, delete] }
-      { allow: groups, groups: ["Employees"], operations: [read] }
-    ]
-  ) {
+type Task @model @auth(rules: [{allow: groups, groups: ["Managers"], operations: [create, update, read, delete]}, {allow: groups, groups: ["Employees"], operations: [read]}]) {
   id: ID!
   title: String!
   description: String
   status: String
 }
 
-type PrivateNote @model @auth(rules: [{ allow: owner }]) {
+type PrivateNote @model @auth(rules: [{allow: owner}]) {
   id: ID!
   content: String!
 }
+
 type Todo @model @auth(rules: [{allow: groups, groups: ["Admin, Vendors,Dispensaries"], operations: [create, read, update, delete]}]) {
   id: ID!
   name: String!
@@ -29,7 +21,7 @@ type Todo @model @auth(rules: [{allow: groups, groups: ["Admin, Vendors,Dispensa
 type Vendor @model @auth(rules: [{allow: owner, operations: [create, read, update, delete]}, {allow: groups, groups: ["Admin, Vendors"]}, {allow: private, operations: [read]}]) {
   id: ID!
   name: String
-  username: String 
+  username: String
   email: AWSEmail
   address: String
   address2: String
@@ -53,8 +45,8 @@ type Vendor @model @auth(rules: [{allow: owner, operations: [create, read, updat
   storeState: String
   storeInsured: String
   mobileSeller: Boolean
-  upvotes: Int 
-  downvotes: Int 
+  upvotes: Int
+  downvotes: Int
   planSelected: String
   feedback: String
   doobieCode: Int
@@ -62,12 +54,7 @@ type Vendor @model @auth(rules: [{allow: owner, operations: [create, read, updat
   products: [Product] @hasMany
 }
 
-type Product @model 
-@auth(rules: [{allow: public,operations: [read]}
-{ allow: groups, groups: ["Admin, Dispensaries, Vendors"], operations: [read, create, update, delete] }
-
-] )
-{
+type Product @model @auth(rules: [{allow: public, operations: [read]}, {allow: groups, groups: ["Admin, Dispensaries, Vendors"], operations: [read, create, update, delete]}]) {
   id: ID!
   createdAt: AWSDateTime
   title: String!
@@ -78,8 +65,8 @@ type Product @model
   Featured: Boolean
   rating: Float
   price: Float!
-  upvotes: Int 
-  downvotes: Int 
+  upvotes: Int
+  downvotes: Int
   shortDescription: String
   description: String
   effects: Effects
@@ -96,8 +83,7 @@ type S3Object {
   region: String!
 }
 
-type Worker @model 
-@auth(rules: [{allow: owner, operations: [read, update, delete]}, {allow: groups, groups: ["Admin"]}]) {
+type Worker @model @auth(rules: [{allow: owner, operations: [read, update, delete]}, {allow: groups, groups: ["Admin"]}]) {
   id: ID!
   accountActive: Boolean
   name: String
@@ -118,7 +104,7 @@ type Order @model @auth(rules: [{allow: owner, operations: [create, read, update
   name: String
   img: String
   date: AWSDateTime
-  user: User 
+  user: User
   Status: OrderStatus
   quantity: Int
   OrderTotal: Float
@@ -231,3 +217,4 @@ enum ProductCategory {
   GEAR
   APPAREL
 }
+ 

@@ -9,7 +9,7 @@ import { Product } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type ActionCardProps = React.PropsWithChildren<Partial<FlexProps> & {
-    product?: Product;
+    productatc?: Product;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;

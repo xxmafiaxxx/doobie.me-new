@@ -1128,7 +1128,7 @@ export const schema = {
                 "Tips": {
                     "name": "Tips",
                     "isArray": false,
-                    "type": "String",
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -1658,5 +1658,5 @@ export const schema = {
             }
         }
     },
-    "version": "83c623c9382b2eeb4abaac14b40b2867"
+    "version": "7d3c48cc6fce147119a5ae13e92a9d89"
 };

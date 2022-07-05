@@ -264,7 +264,7 @@ export declare class User {
   readonly shoppingCart?: (Cart | null)[] | null;
   readonly name?: string | null;
   readonly productLikes?: number | null;
-  readonly Tips?: string | null;
+  readonly Tips?: number | null;
   readonly referredBy?: Referrals | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
