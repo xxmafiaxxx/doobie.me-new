@@ -1,5 +1,5 @@
 import Layout from "../components/layout/Layout";
-
+import Head from "next/head";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 const Gmap = dynamic(() => import("../components/elements/Gmap"), {
@@ -9,6 +9,30 @@ const Gmap = dynamic(() => import("../components/elements/Gmap"), {
 function Contact() {
 	return (
 		<>
+			<Head>
+				<title>
+					Doobie Drone Deliveries - Brooklyn's Cannabis One-Stop-Shop| Cannabis
+					Delivery Service
+				</title>
+				<meta
+					property="og:title"
+					content="Doobie Drone Deliveries - Brooklyn's First Cannabis & Drone Delivery Startup"
+				/>
+				<meta
+					property="og:description"
+					content="Doobie Deliveries is Brooklyn's first cannabis drone delivery service"
+				/>
+				<meta
+					property="og:keywords"
+					content="weed, drugs,weed delivery,weed app, weed in brooklyn,doobie,cannabis,marijuana,drone deliveries,cannabis drone,cannabis token,"
+				/>
+				<meta property="og:url" content="https://doobie.me" />
+				<meta property="og:image" content="/assets/imgs/logodoobie.png" />
+
+				<meta property="og:type" content="website" />
+			
+				<link rel="icon" href="/favicon.png" />
+			</Head>
 			<Layout parent="Home" sub="Pages" subChild="Contact">
 				<div className="page-content pt-50">
 					<div className="container">
@@ -16,7 +40,9 @@ function Contact() {
 							<div className="col-xl-10 col-lg-12 m-auto">
 								<section className="row align-items-end mb-50">
 									<div className="col-lg-4 mb-lg-0 mb-md-5 mb-sm-5">
-										<h4 className="mb-20 text-brand">Doobie Drone Deliveries</h4>
+										<h4 className="mb-20 text-brand">
+											Doobie Drone Deliveries
+										</h4>
 										<h1 className="mb-30">Coming Soon to NYC</h1>
 										<p className="mb-20">
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -32,12 +58,8 @@ function Contact() {
 									<div className="col-lg-8">
 										<div className="row">
 											<div className="col-lg-6 mb-4">
-												<h5 className="mb-20">01. Visit Feedback</h5>
-												<p>
-													Lorem ipsum dolor sit amet, consectetur adipiscing
-													elit. Ut elit tellus, luctus nec ullamcorper mattis,
-													pulvinar dapibus leo.
-												</p>
+												<h5 className="mb-20">01. Crowd Funding</h5>
+												<p>Help us grow our company and buy more drones.</p>
 											</div>
 											<div className="col-lg-6 mb-4">
 												<h5 className="mb-20">02. Employer Services</h5>
