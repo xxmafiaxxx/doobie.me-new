@@ -221,6 +221,15 @@ export const schema = {
                     "properties": {}
                 },
                 {
+                    "type": "key",
+                    "properties": {
+                        "name": "gsi-Vendor.todo",
+                        "fields": [
+                            "vendorTodoId"
+                        ]
+                    }
+                },
+                {
                     "type": "auth",
                     "properties": {
                         "rules": [
@@ -474,7 +483,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "vendorTodoId"
+                        "associatedWith": [
+                            "vendorTodoId"
+                        ]
                     }
                 },
                 "products": {
@@ -488,7 +499,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "vendorProductsId"
+                        "associatedWith": [
+                            "vendorProductsId"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -521,6 +534,15 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "gsi-Order.FilledBy",
+                        "fields": [
+                            "orderFilledById"
+                        ]
+                    }
                 },
                 {
                     "type": "auth",
@@ -732,6 +754,15 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "gsi-Vendor.products",
+                        "fields": [
+                            "vendorProductsId"
+                        ]
+                    }
                 },
                 {
                     "type": "auth",
@@ -979,7 +1010,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "orderFilledById"
+                        "associatedWith": [
+                            "orderFilledById"
+                        ]
                     }
                 },
                 "productorder": {
@@ -993,7 +1026,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "orderProductorderId"
+                        "associatedWith": [
+                            "orderProductorderId"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -1028,6 +1063,15 @@ export const schema = {
                     "properties": {}
                 },
                 {
+                    "type": "key",
+                    "properties": {
+                        "name": "gsi-User.Orders",
+                        "fields": [
+                            "userOrdersId"
+                        ]
+                    }
+                },
+                {
                     "type": "auth",
                     "properties": {
                         "rules": [
@@ -1059,8 +1103,8 @@ export const schema = {
                 }
             ]
         },
-        "User": {
-            "name": "User",
+        "ProductOrder": {
+            "name": "ProductOrder",
             "fields": {
                 "id": {
                     "name": "id",
@@ -1069,82 +1113,35 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "Email": {
-                    "name": "Email",
-                    "isArray": false,
-                    "type": "AWSEmail",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "memberSince": {
-                    "name": "memberSince",
-                    "isArray": false,
-                    "type": "AWSDate",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "Orders": {
-                    "name": "Orders",
-                    "isArray": true,
-                    "type": {
-                        "model": "Order"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "userOrdersId"
-                    }
-                },
-                "shoppingCart": {
-                    "name": "shoppingCart",
-                    "isArray": true,
-                    "type": {
-                        "model": "Cart"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "userShoppingCartId"
-                    }
-                },
-                "name": {
-                    "name": "name",
+                "weight": {
+                    "name": "weight",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
-                "productLikes": {
-                    "name": "productLikes",
+                "date": {
+                    "name": "date",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "quantity": {
+                    "name": "quantity",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
-                "Tips": {
-                    "name": "Tips",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "referredBy": {
-                    "name": "referredBy",
+                "Status": {
+                    "name": "Status",
                     "isArray": false,
                     "type": {
-                        "model": "Referrals"
+                        "enum": "OrderStatus"
                     },
                     "isRequired": false,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "HAS_ONE",
-                        "associatedWith": "id",
-                        "targetName": "userReferredById"
-                    }
+                    "attributes": []
                 },
                 "createdAt": {
                     "name": "createdAt",
@@ -1162,8 +1159,8 @@ export const schema = {
                     "attributes": [],
                     "isReadOnly": true
                 },
-                "userReferredById": {
-                    "name": "userReferredById",
+                "orderProductorderId": {
+                    "name": "orderProductorderId",
                     "isArray": false,
                     "type": "ID",
                     "isRequired": false,
@@ -1171,11 +1168,20 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "Users",
+            "pluralName": "ProductOrders",
             "attributes": [
                 {
                     "type": "model",
                     "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "gsi-Order.productorder",
+                        "fields": [
+                            "orderProductorderId"
+                        ]
+                    }
                 },
                 {
                     "type": "auth",
@@ -1192,12 +1198,6 @@ export const schema = {
                                     "delete"
                                 ],
                                 "identityClaim": "cognito:username"
-                            },
-                            {
-                                "allow": "public",
-                                "operations": [
-                                    "read"
-                                ]
                             },
                             {
                                 "groupClaim": "cognito:groups",
@@ -1273,7 +1273,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "userShoppingCartId"
+                        "targetNames": [
+                            "userShoppingCartId"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -1291,6 +1293,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": [],
                     "isReadOnly": true
+                },
+                "userShoppingCartId": {
+                    "name": "userShoppingCartId",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
                 }
             },
             "syncable": true,
@@ -1325,6 +1334,173 @@ export const schema = {
                                 ],
                                 "operations": [
                                     "delete"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "User": {
+            "name": "User",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "Email": {
+                    "name": "Email",
+                    "isArray": false,
+                    "type": "AWSEmail",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "memberSince": {
+                    "name": "memberSince",
+                    "isArray": false,
+                    "type": "AWSDate",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "Orders": {
+                    "name": "Orders",
+                    "isArray": true,
+                    "type": {
+                        "model": "Order"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true,
+                    "association": {
+                        "connectionType": "HAS_MANY",
+                        "associatedWith": [
+                            "userOrdersId"
+                        ]
+                    }
+                },
+                "shoppingCart": {
+                    "name": "shoppingCart",
+                    "isArray": true,
+                    "type": {
+                        "model": "Cart"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true,
+                    "association": {
+                        "connectionType": "HAS_MANY",
+                        "associatedWith": [
+                            "userShoppingCartId"
+                        ]
+                    }
+                },
+                "name": {
+                    "name": "name",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "productLikes": {
+                    "name": "productLikes",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "Tips": {
+                    "name": "Tips",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "referredBy": {
+                    "name": "referredBy",
+                    "isArray": false,
+                    "type": {
+                        "model": "Referrals"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "association": {
+                        "connectionType": "HAS_ONE",
+                        "associatedWith": [
+                            "id"
+                        ],
+                        "targetNames": [
+                            "userReferredById"
+                        ]
+                    }
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "userReferredById": {
+                    "name": "userReferredById",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
+                }
+            },
+            "syncable": true,
+            "pluralName": "Users",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                },
+                {
+                    "type": "auth",
+                    "properties": {
+                        "rules": [
+                            {
+                                "provider": "userPools",
+                                "ownerField": "owner",
+                                "allow": "owner",
+                                "operations": [
+                                    "create",
+                                    "read",
+                                    "update",
+                                    "delete"
+                                ],
+                                "identityClaim": "cognito:username"
+                            },
+                            {
+                                "allow": "public",
+                                "operations": [
+                                    "read"
+                                ]
+                            },
+                            {
+                                "groupClaim": "cognito:groups",
+                                "provider": "userPools",
+                                "allow": "groups",
+                                "groups": [
+                                    "Admin"
+                                ],
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
                                 ]
                             }
                         ]
@@ -1439,125 +1615,26 @@ export const schema = {
                     }
                 }
             ]
-        },
-        "ProductOrder": {
-            "name": "ProductOrder",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "weight": {
-                    "name": "weight",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "date": {
-                    "name": "date",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "quantity": {
-                    "name": "quantity",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "Status": {
-                    "name": "Status",
-                    "isArray": false,
-                    "type": {
-                        "enum": "OrderStatus"
-                    },
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "orderProductorderId": {
-                    "name": "orderProductorderId",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": false,
-                    "attributes": []
-                }
-            },
-            "syncable": true,
-            "pluralName": "ProductOrders",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "provider": "userPools",
-                                "ownerField": "owner",
-                                "allow": "owner",
-                                "operations": [
-                                    "create",
-                                    "read",
-                                    "update",
-                                    "delete"
-                                ],
-                                "identityClaim": "cognito:username"
-                            },
-                            {
-                                "groupClaim": "cognito:groups",
-                                "provider": "userPools",
-                                "allow": "groups",
-                                "groups": [
-                                    "Admin"
-                                ],
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
         }
     },
     "enums": {
-        "ProductCategory": {
-            "name": "ProductCategory",
+        "OrderStatus": {
+            "name": "OrderStatus",
             "values": [
-                "INDICA",
-                "SATIVA",
-                "HYBRID",
-                "OILS",
-                "TINCTURE",
-                "GEAR",
-                "APPAREL"
+                "RECEIVED",
+                "SUCCESS",
+                "FAILED",
+                "PROCESSING",
+                "DISPATCHED"
+            ]
+        },
+        "ProductWeight": {
+            "name": "ProductWeight",
+            "values": [
+                "SEVENTH",
+                "EIGHT",
+                "ZIP",
+                "HALF"
             ]
         },
         "Effects": {
@@ -1577,25 +1654,6 @@ export const schema = {
                 "ENERGETIC",
                 "TALKATIVE",
                 "AROUSED"
-            ]
-        },
-        "OrderStatus": {
-            "name": "OrderStatus",
-            "values": [
-                "RECEIVED",
-                "SUCCESS",
-                "FAILED",
-                "PROCESSING",
-                "DISPATCHED"
-            ]
-        },
-        "ProductWeight": {
-            "name": "ProductWeight",
-            "values": [
-                "SEVENTH",
-                "EIGHT",
-                "ZIP",
-                "HALF"
             ]
         },
         "DeliveryStatus": {
@@ -1628,6 +1686,18 @@ export const schema = {
                 "FAIL",
                 "DELETED"
             ]
+        },
+        "ProductCategory": {
+            "name": "ProductCategory",
+            "values": [
+                "INDICA",
+                "SATIVA",
+                "HYBRID",
+                "OILS",
+                "TINCTURE",
+                "GEAR",
+                "APPAREL"
+            ]
         }
     },
     "nonModels": {
@@ -1658,5 +1728,6 @@ export const schema = {
             }
         }
     },
-    "version": "7d3c48cc6fce147119a5ae13e92a9d89"
+    "codegenVersion": "3.4.4",
+    "version": "e0f0f0a66c040b98d5d0b881ecdf4800"
 };

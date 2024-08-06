@@ -2,14 +2,19 @@
 import { initSchema } from '@aws-amplify/datastore';
 import { schema } from './schema';
 
-const ProductCategory = {
-  "INDICA": "INDICA",
-  "SATIVA": "SATIVA",
-  "HYBRID": "HYBRID",
-  "OILS": "OILS",
-  "TINCTURE": "TINCTURE",
-  "GEAR": "GEAR",
-  "APPAREL": "APPAREL"
+const OrderStatus = {
+  "RECEIVED": "RECEIVED",
+  "SUCCESS": "SUCCESS",
+  "FAILED": "FAILED",
+  "PROCESSING": "PROCESSING",
+  "DISPATCHED": "DISPATCHED"
+};
+
+const ProductWeight = {
+  "SEVENTH": "SEVENTH",
+  "EIGHT": "EIGHT",
+  "ZIP": "ZIP",
+  "HALF": "HALF"
 };
 
 const Effects = {
@@ -27,21 +32,6 @@ const Effects = {
   "ENERGETIC": "ENERGETIC",
   "TALKATIVE": "TALKATIVE",
   "AROUSED": "AROUSED"
-};
-
-const OrderStatus = {
-  "RECEIVED": "RECEIVED",
-  "SUCCESS": "SUCCESS",
-  "FAILED": "FAILED",
-  "PROCESSING": "PROCESSING",
-  "DISPATCHED": "DISPATCHED"
-};
-
-const ProductWeight = {
-  "SEVENTH": "SEVENTH",
-  "EIGHT": "EIGHT",
-  "ZIP": "ZIP",
-  "HALF": "HALF"
 };
 
 const DeliveryStatus = {
@@ -69,7 +59,17 @@ const MessageStatus = {
   "DELETED": "DELETED"
 };
 
-const { Task, PrivateNote, Todo, Vendor, Product, Worker, Order, User, Cart, Referrals, ProductOrder, S3Object } = initSchema(schema);
+const ProductCategory = {
+  "INDICA": "INDICA",
+  "SATIVA": "SATIVA",
+  "HYBRID": "HYBRID",
+  "OILS": "OILS",
+  "TINCTURE": "TINCTURE",
+  "GEAR": "GEAR",
+  "APPAREL": "APPAREL"
+};
+
+const { Task, PrivateNote, Todo, Vendor, Product, Worker, Order, ProductOrder, Cart, User, Referrals, S3Object } = initSchema(schema);
 
 export {
   Task,
@@ -79,16 +79,16 @@ export {
   Product,
   Worker,
   Order,
-  User,
-  Cart,
-  Referrals,
   ProductOrder,
-  ProductCategory,
-  Effects,
+  Cart,
+  User,
+  Referrals,
   OrderStatus,
   ProductWeight,
+  Effects,
   DeliveryStatus,
   TodoStatus,
   MessageStatus,
+  ProductCategory,
   S3Object
 };
