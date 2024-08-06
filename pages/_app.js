@@ -8,13 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 // import "slick-carousel/slick/slick.css";
 import "react-responsive-modal/styles.css";
 import {
-    LedgerWalletAdapter,
     PhantomWalletAdapter,
-    SlopeWalletAdapter,
-    SolflareWalletAdapter,
-    SolletExtensionWalletAdapter,
-    SolletWalletAdapter,
-    TorusWalletAdapter,
+  
 } from '@solana/wallet-adapter-wallets';
 // import WOW from 'wowjs';
 // Swiper Slider
@@ -26,11 +21,11 @@ import store from "../redux/store";
 import Preloader from "./../components/elements/Preloader";
 import "@aws-amplify/ui-react/styles.css";
 import { Amplify, Auth } from "aws-amplify";
-import aws_exports from "../src/aws-exports";
+import amplifyconfiguration from "../src/amplifyconfiguration";
 import {AmplifyProvider  } from "@aws-amplify/ui-react";
 
 
-Amplify.configure({ aws_exports, ssr: true });
+Amplify.configure({ amplifyconfiguration});
 function MyApp({ Component, pageProps }) {
  
     const [loading, setLoading] = useState(false);
