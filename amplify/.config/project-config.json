@@ -2,7 +2,7 @@
   "providers": [
     "awscloudformation"
   ],
-  "projectName": "smackeddobbieadmin",
+  "projectName": "doobiemenew",
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {
@@ -11,7 +11,7 @@
       "SourceDir": "src",
       "DistributionDir": "build",
       "BuildCommand": "npm.cmd run-script build",
-      "StartCommand": "npm run dev"
+      "StartCommand": "npm.cmd run-script start"
     }
   }
 }

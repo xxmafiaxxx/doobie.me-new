@@ -1,4 +1,31 @@
 {
+  "master": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-doobiemenew-master-3832d-authRole",
+      "UnauthRoleArn": "arn:aws:iam::396092114717:role/amplify-doobiemenew-master-3832d-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::396092114717:role/amplify-doobiemenew-master-3832d-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-doobiemenew-master-3832d-deployment",
+      "UnauthRoleName": "amplify-doobiemenew-master-3832d-unauthRole",
+      "StackName": "amplify-doobiemenew-master-3832d",
+      "StackId": "arn:aws:cloudformation:us-east-1:396092114717:stack/amplify-doobiemenew-master-3832d/6bfb44c0-5390-11ef-8394-0ea540196039",
+      "AmplifyAppId": "d1vflwpgqrd2gk"
+    },
+    "categories": {
+      "auth": {
+        "smackeddobbieadmin232ea2c2": {}
+      },
+      "function": {
+        "ProcessPayment": {},
+        "AddUser": {},
+        "createOrder": {},
+        "sendEmailToMe": {}
+      },
+      "storage": {
+        "s3smackeddobbieadminstoraged32qiutu9hfma3": {}
+      }
+    }
+  },
   "budman": {
     "awscloudformation": {
       "AuthRoleName": "amplify-smackeddobbieadmin-budman-214854-authRole",
