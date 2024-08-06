@@ -4,13 +4,13 @@ import FeatchTab from "../components/ecommerce/fetchTab";
 import Head from "next/head";
 import FetchTabSlider from "../components/ecommerce/fetchTabSlider";
 import Bottom from "../components/elements/Bottom";
-import QuickView from "./../components/ecommerce/QuickView";
-import Banner5 from "./../components/elements/Banner5";
-import Deals1 from "./../components/elements/Deals1";
-import IntroPopup from "./../components/elements/IntroPopup";
-import Layout from "./../components/layout/Layout";
-import CategorySlider from "./../components/sliders/Category";
-import Intro1 from "./../components/sliders/Intro1";
+import QuickView from "../components/ecommerce/QuickView";
+import Banner5 from "../components/elements/Banner5";
+import Deals1 from "../components/elements/Deals1";
+import IntroPopup from "../components/elements/IntroPopup";
+import Layout from "../components/layout/Layout";
+import CategorySlider from "../components/sliders/Category";
+import Intro1 from "../components/sliders/Intro1";
 import Link from "next/link";
 
 export default function Home() {
