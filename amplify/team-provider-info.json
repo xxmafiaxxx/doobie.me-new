@@ -23,6 +23,9 @@
       },
       "storage": {
         "s3smackeddobbieadminstoraged32qiutu9hfma3": {}
+      },
+      "api": {
+        "doobiemenew": {}
       }
     }
   },
