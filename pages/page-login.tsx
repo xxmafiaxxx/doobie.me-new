@@ -1,10 +1,10 @@
 import  React, {useState } from "react";
 import Link from "next/link";
 import Layout from "../components/layout/Layout";
-import { Auth, Amplify } from 'aws-amplify';
+import {  Amplify } from 'aws-amplify';
 import { useRouter } from "next/router";
 import { useUser } from "../src/context/AuthContext";
-import { CognitoUser } from "@aws-amplify/auth";
+//import { CognitoUser } from "@aws-amplify/auth";
 import { withAuthenticator, Authenticator   } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from '../src/aws-exports';
@@ -19,7 +19,7 @@ function Login() {
     const router = useRouter();
     const [signInError, setSignInError] = useState<string>("");
     return <>
-        <Layout parent="Home" sub="Pages" subChild="Login & Register">
+        <Layout>
         <div className="page-content pt-150 pb-150">
             <div className="container">
                 <div className="row">
@@ -40,7 +40,7 @@ function Login() {
                                             
                                             <form method="post">
                                             <div className="form-group">
-                                                <input type="text" required="" name="email" placeholder="Username or Email *" />
+                                                <input type="email" required="" name="email" placeholder="Username or Email *" />
                                             </div>
                                             <div className="form-group">
                                                 <input required="" type="password" name="password" placeholder="Your password *" />
