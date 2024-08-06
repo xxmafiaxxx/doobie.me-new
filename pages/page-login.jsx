@@ -3,17 +3,17 @@ import Link from "next/link";
 import Layout from "../components/layout/Layout";
 import {  Amplify } from 'aws-amplify';
 import { useRouter } from "next/router";
-import { useUser } from "../src/context/AuthContext";
+//import { useUser } from "../src/context/AuthContext";
 //import { CognitoUser } from "@aws-amplify/auth";
 import { withAuthenticator, Authenticator   } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from '../src/aws-exports';
 Amplify.configure(awsExports);
 
-interface IFormInput {
-    username: string;
-    password: string;
-  }
+// interface IFormInput {
+//     username: string;
+//     password: string;
+//   }
 function Login() {
     const [open, setOpen] = useState(false);
     const router = useRouter();
