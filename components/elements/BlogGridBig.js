@@ -141,41 +141,39 @@ const BlogGridBig = ({ show }) => {
         },
     ];
 
-    return (
-        <>
-                                        
-            {data.slice(0, show).map((item, i) => (
-                <article className="first-post mb-30 hover-up animated" key={i}>
-                <div className="position-relative overflow-hidden">
-                    <span className="top-left-icon"><i className="fi-rs-headphones"></i></span>
-                    <div className="post-thumb border-radius-15">
-                        <Link href="/blog-post-right"><a>
-                            <img className="border-radius-15" src={`/assets/imgs/blog/${item.img}`} alt="" />
-                        </a></Link>
-                    </div>
+    return <>
+                                    
+        {data.slice(0, show).map((item, i) => (
+            <article className="first-post mb-30 hover-up animated" key={i}>
+            <div className="position-relative overflow-hidden">
+                <span className="top-left-icon"><i className="fi-rs-headphones"></i></span>
+                <div className="post-thumb border-radius-15">
+                    <Link href="/blog-post-right">
+                        <img className="border-radius-15" src={`/assets/imgs/blog/${item.img}`} alt="" />
+                    </Link>
                 </div>
-                <div className="entry-content">
-                    <h2 className="post-title mb-20">
-                        <Link href="/blog-post-right"><a>{item.title} </a></Link>
-                    </h2>
-                    <p className="post-exerpt font-medium text-muted mb-30">{item.desc}</p>
-                    <div className="mb-20 entry-meta meta-2">
-                        <div className="entry-meta meta-1 mb-30">
-                            <div className="font-sm">
-                                <span><span className="mr-10 text-muted"><i className="fi-rs-eye"></i></span>23k</span>
-                                <span className="ml-30"
-                                    ><span className="mr-10 text-muted"><i className="fi-rs-comment-alt"></i></span>17k</span>
-                                <span className="ml-30"
-                                    ><span className="mr-10 text-muted"><i className="fi-rs-share"></i></span>18k</span>
-                            </div>
+            </div>
+            <div className="entry-content">
+                <h2 className="post-title mb-20">
+                    <Link href="/blog-post-right">{item.title} </Link>
+                </h2>
+                <p className="post-exerpt font-medium text-muted mb-30">{item.desc}</p>
+                <div className="mb-20 entry-meta meta-2">
+                    <div className="entry-meta meta-1 mb-30">
+                        <div className="font-sm">
+                            <span><span className="mr-10 text-muted"><i className="fi-rs-eye"></i></span>23k</span>
+                            <span className="ml-30"
+                                ><span className="mr-10 text-muted"><i className="fi-rs-comment-alt"></i></span>17k</span>
+                            <span className="ml-30"
+                                ><span className="mr-10 text-muted"><i className="fi-rs-share"></i></span>18k</span>
                         </div>
-                        <Link href="/blog-post-right"><a className="btn btn-sm">Read more<i className="fi-rs-arrow-right ml-10"></i></a></Link>
                     </div>
+                    <Link href="/blog-post-right" className="btn btn-sm">Read more<i className="fi-rs-arrow-right ml-10"></i></Link>
                 </div>
-            </article>
-            ))}
-        </>
-    );
+            </div>
+        </article>
+        ))}
+    </>;
 };
 
 export default BlogGridBig;

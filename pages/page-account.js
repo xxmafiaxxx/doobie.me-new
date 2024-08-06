@@ -44,7 +44,7 @@ function Account({})  {
                                                     <a className={activeIndex === 5 ? "nav-link active" : "nav-link"}  onClick={() => handleOnClick(5)}><i className="fi-rs-user mr-10"></i>Account details</a>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <Link href="/page-account"><a className="nav-link"  onClick={signOut}><i className="fi-rs-sign-out mr-10"></i>Logout</a></Link>
+                                                    <Link href="/page-account" className="nav-link" onClick={signOut}><i className="fi-rs-sign-out mr-10"></i>Logout</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -175,7 +175,7 @@ function Account({})  {
                                                         <h5>Account Details</h5>
                                                     </div>
                                                     <div className="card-body">
-                                                        <p>Already have an account? <Link href="/page-login"><a>Log in instead!</a></Link></p>
+                                                        <p>Already have an account? <Link href="/page-login">Log in instead!</Link></p>
                                                         <form method="post" name="enq">
                                                             <div className="row">
                                                                 <div className="form-group col-md-6">

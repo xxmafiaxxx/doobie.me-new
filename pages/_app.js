@@ -21,11 +21,11 @@ import store from "../redux/store";
 import Preloader from "./../components/elements/Preloader";
 import "@aws-amplify/ui-react/styles.css";
 import { Amplify, Auth } from "aws-amplify";
-import amplifyconfiguration from "../src/amplifyconfiguration";
+import amplifyconfiguration from "../src/amplifyconfiguration.json";
 import {AmplifyProvider  } from "@aws-amplify/ui-react";
 
 
-Amplify.configure({ amplifyconfiguration});
+Amplify.configure(amplifyconfiguration);
 function MyApp({ Component, pageProps }) {
  
     const [loading, setLoading] = useState(false);

@@ -9,31 +9,31 @@ const HomeBlog = () => {
                 <article className="wow fadeIn animated">
                     <div className="d-md-flex d-block">
                         <div className="post-thumb d-flex mr-15">
-                            <Link href="/blog-post-fullwidth">
-                                <a className="color-white">
-                                    <img
-                                        src="/assets/imgs/blog/blog-2.jpg"
-                                        alt=""
-                                    />
-                                </a>
+                            <Link href="/blog-post-fullwidth" className="color-white">
+
+                                <img
+                                    src="/assets/imgs/blog/blog-2.jpg"
+                                    alt=""
+                                />
+
                             </Link>
                         </div>
                         <div className="post-content">
                             <div className="entry-meta mb-10 mt-10">
-                                <Link href="/blog-category-fullwidth">
-                                    <a className="entry-meta meta-2">
-                                        <span className="post-in font-x-small">
-                                            Fashion
-                                        </span>
-                                    </a>
+                                <Link href="/blog-category-fullwidth" className="entry-meta meta-2">
+
+                                    <span className="post-in font-x-small">
+                                        Fashion
+                                    </span>
+
                                 </Link>
                             </div>
                             <h4 className="post-title mb-25 text-limit-2-row">
                                 <Link href="/blog-post-fullwidth">
-                                    <a>
+                                    
                                         Qualcomm is developing a Nintendo
                                         Switch-like console, report says
-                                    </a>
+                                    
                                 </Link>
                             </h4>
                             <div className="entry-meta meta-1 font-xs color-grey mt-10 pb-10">
@@ -46,7 +46,7 @@ const HomeBlog = () => {
                                     </span>
                                 </div>
                                 <Link href="/blog-post-right">
-                                    <a>Read More</a>
+                                    Read More
                                 </Link>
                             </div>
                         </div>
@@ -55,31 +55,31 @@ const HomeBlog = () => {
                 <article className="wow fadeIn animated">
                     <div className="d-md-flex d-block">
                         <div className="post-thumb d-flex mr-15">
-                            <Link href="/blog-post-fullwidth">
-                                <a className="color-white">
-                                    <img
-                                        src="/assets/imgs/blog/blog-1.jpg"
-                                        alt=""
-                                    />
-                                </a>
+                            <Link href="/blog-post-fullwidth" className="color-white">
+
+                                <img
+                                    src="/assets/imgs/blog/blog-1.jpg"
+                                    alt=""
+                                />
+
                             </Link>
                         </div>
                         <div className="post-content">
                             <div className="entry-meta mb-10 mt-10">
-                                <Link href="/blog-category-fullwidth">
-                                    <a className="entry-meta meta-2">
-                                        <span className="post-in font-x-small">
-                                            Healthy
-                                        </span>
-                                    </a>
+                                <Link href="/blog-category-fullwidth" className="entry-meta meta-2">
+
+                                    <span className="post-in font-x-small">
+                                        Healthy
+                                    </span>
+
                                 </Link>
                             </div>
                             <h4 className="post-title mb-25 text-limit-2-row">
                                 <Link href="/blog-post-fullwidth">
-                                    <a>
+                                    
                                         Not even the coronavirus can derail 5G's
                                         global momentum
-                                    </a>
+                                    
                                 </Link>
                             </h4>
                             <div className="entry-meta meta-1 font-xs color-grey mt-10 pb-10">
@@ -92,7 +92,7 @@ const HomeBlog = () => {
                                     </span>
                                 </div>
                                 <Link href="/blog-post-right">
-                                    <a>Read More</a>
+                                    Read More
                                 </Link>
                             </div>
                         </div>
