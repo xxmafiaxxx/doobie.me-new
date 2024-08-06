@@ -30,7 +30,7 @@ function Contact() {
 				<meta property="og:image" content="/assets/imgs/logodoobie.png" />
 
 				<meta property="og:type" content="website" />
-			
+
 				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<Layout parent="Home" sub="Pages" subChild="Contact">
@@ -45,9 +45,12 @@ function Contact() {
 										</h4>
 										<h1 className="mb-30">Coming Soon to NYC</h1>
 										<p className="mb-20">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
-											dapibus leo.
+											Imagine a world where the items you need arrive at your
+											doorstep within minutes, bypassing traffic, reducing
+											carbon footprints, and redefining convenience. Welcome to
+											Doobie Drone Deliveries, where innovation meets
+											efficiency, and the sky is no longer the limit—it's our
+											highway.
 										</p>
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -59,14 +62,29 @@ function Contact() {
 										<div className="row">
 											<div className="col-lg-6 mb-4">
 												<h5 className="mb-20">01. Crowd Funding</h5>
-												<p>Help us grow our company and buy more drones.</p>
+												<p>
+													We're not just a delivery service; we're a movement
+													towards a smarter, greener future. But to bring this
+													vision to life, we need your support. By contributing
+													to our crowdfunding campaign, you're not only
+													investing in a groundbreaking technology but also in a
+													cleaner planet and a more efficient way of living.
+												</p>
 											</div>
 											<div className="col-lg-6 mb-4">
-												<h5 className="mb-20">02. Employer Services</h5>
+												<h5 className="mb-20">
+													02. Why Choose Doobie Drone Deliveries?
+												</h5>
 												<p>
-													Lorem ipsum dolor sit amet, consectetur adipiscing
-													elit. Ut elit tellus, luctus nec ullamcorper mattis,
-													pulvinar dapibus leo.
+													At Doobie Drone Deliveries, we harness cutting-edge
+													drone technology to provide an unparalleled delivery
+													experience. Our fleet of advanced drones is equipped
+													to handle everything from urgent medical supplies to
+													your favorite local takeout, all while ensuring speed,
+													safety, and sustainability. We believe in transforming
+													everyday logistics into a seamless, high-tech
+													experience that benefits consumers, businesses, and
+													the environment.
 												</p>
 											</div>
 											<div className="col-lg-6 mb-lg-0 mb-4">
@@ -80,11 +98,16 @@ function Contact() {
 												</p>
 											</div>
 											<div className="col-lg-6">
-												<h5 className="mb-20">04.General Inquiries</h5>
+												<h5 className="mb-20">04.Why Now?</h5>
 												<p>
-													Lorem ipsum dolor sit amet, consectetur adipiscing
-													elit. Ut elit tellus, luctus nec ullamcorper mattis,
-													pulvinar dapibus leo.
+													The demand for quick, reliable, and eco-friendly
+													delivery options has never been higher. With your
+													help, Doobie Drone Deliveries can be at the forefront
+													of this transformation. We're offering exclusive perks
+													for our early backers, including discounted delivery
+													rates, VIP access to new features, and a chance to be
+													part of a community that’s changing the world, one
+													delivery at a time.
 												</p>
 											</div>
 										</div>
@@ -107,13 +130,13 @@ function Contact() {
 									<div className="row mb-60">
 										<div className="col-md-4 mb-4 mb-md-0">
 											<h4 className="mb-15 text-brand">Office</h4>
-											205 North Michigan Avenue, Suite 810
+											205 North Michigan Avenue, Suite 6B
 											<br />
-											Chicago, 60601, USA
+											Brooklyn, NY, 11213, USA
 											<br />
-											<abbr title="Phone">Phone:</abbr> (123) 456-7890
+											<abbr title="Phone">Phone:</abbr> (929) 487-3802
 											<br />
-											<abbr title="Email">Email: </abbr>contact@Evara.com
+											<abbr title="Email">Email: </abbr>contact@doobie.me
 											<br />
 											<a className="btn btn-sm font-weight-bold text-white mt-20 border-radius-5 btn-shadow-brand hover-up">
 												<i className="fi-rs-marker mr-5"></i>View map
