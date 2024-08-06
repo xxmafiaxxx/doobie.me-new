@@ -33,7 +33,7 @@ function Contact() {
 
 				<link rel="icon" href="/favicon.png" />
 			</Head>
-			<Layout parent="Home" sub="Pages" subChild="Contact">
+			<Layout parent="Home">
 				<div className="page-content pt-50">
 					<div className="container">
 						<div className="row">
@@ -89,7 +89,7 @@ function Contact() {
 											</div>
 											<div className="col-lg-6 mb-lg-0 mb-4">
 												<h5 className="mb-20 text-brand">
-													03. Billing Inquiries
+													03. Drone Delivery Instructions
 												</h5>
 												<p>
 													Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -130,13 +130,13 @@ function Contact() {
 									<div className="row mb-60">
 										<div className="col-md-4 mb-4 mb-md-0">
 											<h4 className="mb-15 text-brand">Office</h4>
-											205 North Michigan Avenue, Suite 6B
+											18 East 48th Street.
 											<br />
-											Brooklyn, NY, 11213, USA
+											New York, NY, 11213, USA
 											<br />
 											<abbr title="Phone">Phone:</abbr> (929) 487-3802
 											<br />
-											<abbr title="Email">Email: </abbr>contact@doobie.me
+											<abbr title="Email">Email: </abbr>smackedc@gmail.com
 											<br />
 											<a className="btn btn-sm font-weight-bold text-white mt-20 border-radius-5 btn-shadow-brand hover-up">
 												<i className="fi-rs-marker mr-5"></i>View map
@@ -144,13 +144,13 @@ function Contact() {
 										</div>
 										<div className="col-md-4 mb-4 mb-md-0">
 											<h4 className="mb-15 text-brand">Studio</h4>
-											205 North Michigan Avenue, Suite 810
+											18 East 48th Street.
 											<br />
-											Chicago, 60601, USA
+											Chicago, New York, NY, 11213, USA , USA
 											<br />
-											<abbr title="Phone">Phone:</abbr> (123) 456-7890
+											<abbr title="Phone">Phone:</abbr> (929) 487-3802
 											<br />
-											<abbr title="Email">Email: </abbr>contact@Evara.com
+											<abbr title="Email">Email: </abbr>smackedc@gmail.com
 											<br />
 											<a className="btn btn-sm font-weight-bold text-white mt-20 border-radius-5 btn-shadow-brand hover-up">
 												<i className="fi-rs-marker mr-5"></i>View map
@@ -158,13 +158,13 @@ function Contact() {
 										</div>
 										<div className="col-md-4">
 											<h4 className="mb-15 text-brand">Shop</h4>
-											205 North Michigan Avenue, Suite 810
+											18 East 48th Street.
 											<br />
-											Chicago, 60601, USA
+											New York, NY, 11213, USA
 											<br />
-											<abbr title="Phone">Phone:</abbr> (123) 456-7890
+											<abbr title="Phone">Phone:</abbr> (929) 487-3802
 											<br />
-											<abbr title="Email">Email: </abbr>contact@Evara.com
+											<abbr title="Email">Email: </abbr>smackedc@gmail.com
 											<br />
 											<a className="btn btn-sm font-weight-bold text-white mt-20 border-radius-5 btn-shadow-brand hover-up">
 												<i className="fi-rs-marker mr-5"></i>View map

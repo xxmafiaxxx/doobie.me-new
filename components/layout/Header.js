@@ -86,7 +86,7 @@ const Header = ({
                                         Need help? Call Us:{" "}
                                         <strong className="text-brand">
                                             {" "}
-                                            + 1718 673 8192
+                                            1 929 487 3802
                                         </strong>
                                     </li>
                                     <li>
@@ -105,24 +105,8 @@ const Header = ({
                                                     />Français
                                                 </Link>
                                             </li>
-                                            <li>
-                                                <Link href="/#">
-
-                                                    <img
-                                                        src="/assets/imgs/theme/flag-dt.png"
-                                                        alt=""
-                                                    />Deutsch
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/#">
-
-                                                    <img
-                                                        src="/assets/imgs/theme/flag-ru.png"
-                                                        alt=""
-                                                    />Pусский
-                                                </Link>
-                                            </li>
+                                     
+                             
                                         </ul>
                                     </li>
                                     <li>
