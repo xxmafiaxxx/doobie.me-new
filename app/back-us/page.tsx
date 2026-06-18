@@ -18,6 +18,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 import { crowdfund, tiers, formatUSD, goalProgress } from "@/lib/crowdfund";
 import { site, absUrl } from "@/lib/site";
+import DroneImage from "@/components/home/DroneImage";
 
 export const metadata: Metadata = {
   title: "Back Doobie — Fund Brooklyn's Homegrown Drone Delivery Startup",

@@ -20,6 +20,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { faqSchema, serviceSchema } from "@/lib/schema";
 import { homeFaqs } from "@/lib/faqs";
 import type { Metadata } from "next";
+import DroneImage from "@/components/home/DroneImage";
 
 export const metadata: Metadata = {
   title: "Drone Delivery in NYC — Fast, Autonomous & Zero-Emission",
@@ -231,6 +232,30 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Drone delivery visuals */}
+      <section className="container py-16">
+        <div className="grid gap-6 lg:grid-cols-3">
+          <DroneImage
+            src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&q=80"
+            alt="Autonomous drone flying over New York City skyline delivering a package"
+            className="h-80"
+          />
+          <DroneImage
+            src="https://images.unsplash.com/photo-1506947411487-a567aa721a0a?w=800&q=80"
+            alt="Drone delivery in urban environment with package being lowered"
+            className="h-80"
+          />
+          <DroneImage
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+            alt="Modern delivery drone hovering above residential building rooftop"
+            className="h-80"
+          />
+        </div>
+        <p className="mt-4 text-center text-sm text-slate-500">
+          Real drone delivery operations in dense urban environments — the future of last-mile logistics.
+        </p>
       </section>
 
       {/* Value props */}
