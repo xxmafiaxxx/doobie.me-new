@@ -49,6 +49,12 @@ export const mainNav: NavItem[] = [
   { label: "FAQ", href: "/faq" },
 ];
 
+/** High-value conversion entry points surfaced as CTA buttons. */
+export const ctaNav: NavItem[] = [
+  { label: "Back Us", href: "/back-us" },
+  { label: "Get Early Access", href: "/get-started" },
+];
+
 export const footerNav: { heading: string; items: NavItem[] }[] = [
   {
     heading: "Service",
@@ -64,6 +70,7 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
     heading: "Company",
     items: [
       { label: "About Us", href: "/about" },
+      { label: "Back Us", href: "/back-us" },
       { label: "Blog", href: "/blog" },
       { label: "Get Early Access", href: "/get-started" },
       { label: "Contact", href: "/contact" },

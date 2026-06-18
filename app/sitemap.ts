@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absUrl("/service-areas"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: absUrl("/pricing"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: absUrl("/get-started"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: absUrl("/back-us"), lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: absUrl("/faq"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: absUrl("/about"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: absUrl("/blog"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },

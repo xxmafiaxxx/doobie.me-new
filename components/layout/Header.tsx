@@ -84,8 +84,8 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Link href="/contact" className="btn-ghost">
-            Contact
+          <Link href="/back-us" className="btn-ghost text-brand-700">
+            Back Us
           </Link>
           <Link href="/get-started" className="btn-primary">
             Get Early Access
@@ -133,7 +133,10 @@ export default function Header() {
           <Link href="/contact" className="rounded-lg px-3 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-50">
             Contact
           </Link>
-          <Link href="/get-started" className="btn-primary mt-2 w-full">
+          <Link href="/back-us" className="btn-ghost mt-2 w-full justify-center text-brand-700">
+            Back Us
+          </Link>
+          <Link href="/get-started" className="btn-primary w-full">
             Get Early Access
           </Link>
         </nav>
