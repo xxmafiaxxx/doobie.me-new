@@ -47,6 +47,7 @@ export const mainNav: NavItem[] = [
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
+  { label: "Dashboard", href: "/dashboard" },
 ];
 
 /** High-value conversion entry points surfaced as CTA buttons. */
@@ -74,6 +75,7 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
       { label: "Blog", href: "/blog" },
       { label: "Get Early Access", href: "/get-started" },
       { label: "Contact", href: "/contact" },
+      { label: "Backer Dashboard", href: "/dashboard" },
     ],
   },
   {
