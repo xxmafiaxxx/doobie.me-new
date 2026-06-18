@@ -3,6 +3,12 @@ logs
 *.log
 npm-debug.log*
 yarn-debug.log*
+
+# Archived legacy site (kept locally, not committed)
+_archive/
+
+# Lead submissions from the waitlist / contact forms
+.leads/
 yarn-error.log*
 lerna-debug.log*
 

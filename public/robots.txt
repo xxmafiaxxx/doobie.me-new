@@ -1,7 +1,0 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: *
-Allow: /
-
-Sitemap: https://www.doobie.me/sitemap.xml
