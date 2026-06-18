@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.doobie.me/</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/how-it-works</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/use-cases</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/service-areas</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/pricing</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/about</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/blog</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/faq</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/contact</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/get-started</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/privacy</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/terms</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/blog/how-fast-is-drone-delivery</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/blog/is-drone-delivery-safe</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/blog/zero-emission-last-mile-delivery</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.doobie.me/blog/what-can-be-delivered-by-drone</loc>
+  <lastmod>2026-06-18T14:14:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+</urlset>
