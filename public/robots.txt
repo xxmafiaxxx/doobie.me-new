@@ -4,4 +4,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.samsfamilydental.com/sitemap.xml
+Sitemap: https://www.doobie.me/sitemap.xml
